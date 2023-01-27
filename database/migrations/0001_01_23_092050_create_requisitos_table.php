@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('distritos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('requisitos', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('nome', 255);
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('distritos');
+        Schema::dropIfExists('requisitos');
     }
 };

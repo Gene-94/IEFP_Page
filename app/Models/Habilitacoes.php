@@ -10,11 +10,17 @@ class Habilitacoes extends Model
     use HasFactory;
     
 
-
+    protected $fillable = [
+        'nome_descritivo'
+    ];
 
 
 
 
 
     protected $table = 'habilitacoes';
+
+    public function user(){
+        return $this->hasMany(Formando::class);
+    }
 }

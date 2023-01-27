@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('regimes_horario', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('estados_inscricao', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('nome_estado');
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('regimes_horario');
+        Schema::dropIfExists('estados_inscricao');
     }
 };

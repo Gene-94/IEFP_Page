@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('requisitos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('paises', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('nome', 50);
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requisitos');
+        Schema::dropIfExists('paises');
     }
 };

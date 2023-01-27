@@ -5,23 +5,22 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TipoDocumento extends Model
+class NrTrabalhadores_Opcao extends Model
 {
     use HasFactory;
     
 
 
+
     protected $fillable = [
-        'tipo',
+        'nome_opcao'
     ];
 
 
 
+    protected $table = 'nr_trabalhadores';
 
-    protected $table = 'tipos_documento';
-
-    public function formando(){
-        return $this->hasMany(Formando::class);
+    public function empresa(){
+        return $this->hasMany(Empresa::class);
     }
-
 }

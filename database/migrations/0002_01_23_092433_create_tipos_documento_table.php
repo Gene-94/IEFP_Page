@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('sit_prof__subsidios', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('tipos_documento', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('tipo', 50);
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sit_prof__subsidios');
+        Schema::dropIfExists('tipos_documento');
     }
 };

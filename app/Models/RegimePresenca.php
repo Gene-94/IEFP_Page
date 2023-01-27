@@ -9,7 +9,9 @@ class RegimePresenca extends Model
 {
     use HasFactory;
     
-
+    protected $fillable = [
+        'nome_regime'
+    ];
 
 
 
@@ -17,4 +19,8 @@ class RegimePresenca extends Model
 
 
     protected $table = 'regimes_presenca';
+
+    public function formacao(){
+        return $this->hasMany(Formacao::class);
+    }
 }

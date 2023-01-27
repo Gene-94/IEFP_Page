@@ -13,9 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('formandos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('concelhos', function (Blueprint $table) {
+            $table->smallIncrements('id');
+            $table->string('nome',50);
+            $table->unsignedTinyInteger('distrito_id');
+
+            $table->foreign('distrito_id')->references('id')->on('distritos');
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('formandos');
+        Schema::dropIfExists('concelhos');
     }
 };

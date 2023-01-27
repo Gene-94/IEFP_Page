@@ -20,5 +20,24 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+        
+        $this->call(RequisitosTableSeeder::class);
+        $this->call(TiposDocumentoTableSeeder::class);
+        $this->call(PaisesTableSeeder::class);
+        $this->call(HabilitacoesTableSeeder::class);
+        $this->call(SitProfSubsidiosTableSeeder::class);
+        $this->call(DistritosTableSeeder::class);
+        $this->call(ConcelhosTableSeeder::class);
+        $this->call(RegimesPresencaTableSeeder::class);
+        $this->call(RegimesHorarioTableSeeder::class);
+        $this->call(CoordenadoresTableSeeder::class);
+        $this->call(NrTrabalhadoresOpcoesTableSeeder::class);
+        $this->call(EmpresasTableSeeder::class);
+        $this->call(EstadosInscricaoTableSeeder::class);
+        $this->call(FormandosTableSeeder::class);
+        $this->call(FormacoesTableSeeder::class);
+        $this->call(InscricoesTableSeeder::class);
+        $this->call(RequisitosInscricaoTableSeeder::class);
+        $this->call(RequisitosFormacaoTableSeeder::class);
     }
 }

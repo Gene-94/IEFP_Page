@@ -10,11 +10,17 @@ class RegimeHorario extends Model
     use HasFactory;
     
 
-
+    protected $fillable = [
+        'nome_regime'
+    ];
 
 
 
 
 
     protected $table = 'regimes_horario';
+
+    public function formacao(){
+        return $this->hasMany(Formacao::class);
+    }
 }

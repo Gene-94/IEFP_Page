@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('habilitacoes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('nr_trabalhadores__opcoes', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('nome_opcao');
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('habilitacoes');
+        Schema::dropIfExists('nr_trabalhadores__opcoes');
     }
 };

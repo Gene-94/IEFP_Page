@@ -9,7 +9,9 @@ class Distrito extends Model
 {
     use HasFactory;
     
-
+    protected $fillable = [
+        'nome'
+    ];
 
 
 
@@ -17,4 +19,12 @@ class Distrito extends Model
 
 
     protected $table = 'distritos';
+
+    public function concelhos(){
+        return $this->hasMany(Concelho::class);
+    }
+
+    public function formandos(){
+        return $this->hasManyThrough(Formandos::class, Concelhos::class, 'distrito_id', 'concelho_id');
+    }
 }

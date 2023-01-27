@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('paises', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('regimes_presenca', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('nome_regime', 255);
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paises');
+        Schema::dropIfExists('regimes_presenca');
     }
 };

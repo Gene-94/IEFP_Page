@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('concelhos', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('sit_prof_subsidios', function (Blueprint $table) {
+            $table->tinyIncrements('id');
+            $table->string('nome', 255);
+            $table->string('detalhes', 500)->nullable();
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('concelhos');
+        Schema::dropIfExists('sit_prof_subsidios');
     }
 };
