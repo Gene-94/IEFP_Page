@@ -14,8 +14,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/formulario', function () {
+    return view('base_form');
+});
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+
+
+Route::get('/tailwind_form', function () {
+    return view('tailwind_form');
+});
+
+
+Route::post('/formulario', function () {
+    return redirect('/');
 });
 
 Route::get('/dashboard', function () {
