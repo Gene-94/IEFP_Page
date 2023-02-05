@@ -40,3 +40,6 @@ body {
     background-color: transparent;
   }
 
+  .negative-margin-top{
+    margin-top: 0%;
+  }

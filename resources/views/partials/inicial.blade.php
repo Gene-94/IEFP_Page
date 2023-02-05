@@ -1,4 +1,5 @@
 <div class="fomrSection inicial fade">
+    <p>formulario de inscrição para fromação</p>
     <div class="font-bold text-gray-600 text-xs leading-8 uppercase h-6 mx-2 mt-3"> Nome</div>
     <div class="w-full flex-1 mx-2 svelte-1l8159u">
         <div class="bg-white my-2 p-1 flex border border-gray-200 rounded svelte-1l8159u">

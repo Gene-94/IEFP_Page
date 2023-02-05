@@ -17,7 +17,8 @@
         @include('partials.progressBar')
         <div class="mt-8 p-4">
             
-            <form action="">
+            <form action="" enctype="multipart/form-data"  method="POST">
+                {{csrf_field()}}
             @include('partials.inicial')
             @include('partials.identificacao')
             @include('partials.morada')

@@ -53,7 +53,7 @@ function showSection(n) {
     btn_prev.style.display = "none";
   }
   if (cardIndex == slides.length-1){
-    //banner.style.display = "";
+    banner.style.display = "";
     btn_next.style.display = "none";
   }
 
