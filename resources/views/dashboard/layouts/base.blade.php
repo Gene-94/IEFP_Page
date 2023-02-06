@@ -1,3 +1,9 @@
+@php
+    
+
+@endphp
+
+
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}" class="h-full bg-gray-100">
     <head>
@@ -15,8 +21,9 @@
         <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
     </head>
     <body class="font-sans antialiased h-full">
+            @include('dashboard.partials.nav')
             <main>
-                @yield('content');
+                @yield('content')
             </main>
         </div>
     </body>

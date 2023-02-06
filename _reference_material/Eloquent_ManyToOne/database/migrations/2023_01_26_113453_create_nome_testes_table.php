@@ -1,0 +1,37 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+        Schema::create('nome_testes', function (Blueprint $table) {
+            $table->id();
+            $table->string('nome');
+            $table->string('morada')->nullable();
+            $table->integer('anonascimento');
+
+            $table->foreign('nome')->references('nome')->on('')
+
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::dropIfExists('nome_testes');
+    }
+};
