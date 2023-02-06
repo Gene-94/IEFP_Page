@@ -19,7 +19,11 @@ Route::get('/formulario', function () {
 });
 
 Route::get('/form', function () {
-    return view('form');
+    return view('form/form');
+});
+
+Route::get('/coordenador', function(){
+    return view('dashboard/area_trabalho');
 });
 
 

@@ -122,3 +122,27 @@ function initialShow(){
     banner.style.display = "";
     showSection(cardIndex);
 }
+
+
+function postalFocus() {
+  const postal1 = document.querySelector('[data-target="postal1"]');
+  const postal2 = document.querySelector('[data-target="postal2"]');
+  
+  postal1.addEventListener('input', (e) => {
+    let length = e.target.value.length 
+    if(length >= 4){
+      postal2.focus();
+      e.target.value = (e.target.value).substring(0,4);
+    }
+  });
+
+  postal2.addEventListener('input', (e) => {
+    let length = e.target.value.length 
+    if(length >= 3){
+      postal2.blur();
+      e.target.value = (e.target.value).substring(0,3);
+    }
+  });
+}
+
+
