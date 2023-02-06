@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 <div class="fomrSection inicial fade" data-layout="formSection">
+=======
+<div class="fomrSection inicial fade">
+    <p>formulario de inscrição para fromação</p>
+>>>>>>> 5ba7d38cb7b1f6fa4191942e0176b5cf22f2d5ec
     <div class="font-bold text-gray-600 text-xs leading-8 uppercase h-6 mx-2 mt-3"> Nome</div>
     <div class="w-full flex-1 mx-2  ">
         <div class="bg-white my-2 p-1 flex border border-gray-200 rounded  ">
