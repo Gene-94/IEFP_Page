@@ -1,0 +1,14 @@
+<html>
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <h1 x-data="{ message: 'I ❤️ Alpine' }" x-text="message"></h1>
+    
+    <div x-data="{txt:'', count: 0 }">
+        <button x-on:click="count++" x-on:mouseover="txt= ' this !!!'"  x-on:mouseout="txt= ''">👍 Like<span x-text="txt"></span></button>
+        <p><span x-text="count"></span> <a href="./likedby.html">Likes</a></p>
+        
+    </div>
+</body>
+</html>
