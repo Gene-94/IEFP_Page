@@ -16,13 +16,12 @@ function prevSection() {
 
 
 function showSection(n) {
-  let i;
-
-  let slides = document.getElementsByClassName("fomrSection");
-  let btn_prev = document.getElementById("prevBtn");
-  let btn_next = document.getElementById("nextBtn");
-  let bar = document.getElementById("progressBar");
-  let banner = document.getElementById("iefp_banner");
+  //document.querySelector("[data-layout=formSection]")
+  const slides = document.getElementsByClassName("fomrSection");
+  const btn_prev = document.getElementById("prevBtn");
+  const btn_next = document.getElementById("nextBtn");
+  const bar = document.getElementById("progressBar");
+  const banner = document.getElementById("iefp_banner");
   btn_prev.style.display = "block";
   btn_next.style.display = "block";
   bar.style.display = "none";
@@ -44,7 +43,7 @@ function showSection(n) {
   //let dots = document.getElementsByClassName("dot"); // replace dor for each progress-item
   if (n >= slides.length) {cardIndex = slides.length-1;}
   if (n < 0) {cardIndex = 0}
-  for (i = 0; i < slides.length; i++) {
+  for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
 
