@@ -18,7 +18,7 @@ class NrTrabalhadores_Opcao extends Model
 
 
 
-    protected $table = 'nr_trabalhadores';
+    protected $table = 'nr_trabalhadores__opcoes';
 
     public function empresa(){
         return $this->hasMany(Empresa::class);

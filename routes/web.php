@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,23 +15,24 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/formulario', function () {
-    return view('base_form');
-});
-
+/*
 Route::get('/form', function () {
     return view('form/form');
 });
+*/
 
-Route::get('/coordenador', function(){
+Route::get('/dashboard', function(){
     return view('dashboard/area_trabalho');
 });
 
+Route::get('/editar_opcoes', [AdminController::class, 'edit_options']);
 
 
+/*
 Route::get('/tailwind_form', function () {
     return view('tailwind_form');
 });
+*/
 
 
 Route::post('/formulario', function () {

@@ -12,3 +12,19 @@ function openMenu(bool) {
    }
 
 }
+
+function addOption(){
+
+}
+
+function editOption() {
+   confirm();
+}
+
+function deleteOption(nome) {
+   let confirm = confirm(`Tem a certeza que deseja apagar a opçao ${nome} ?`);
+   if(confirm) {
+      alert("Opçao apagada !");
+   }
+   return "submit";
+}
