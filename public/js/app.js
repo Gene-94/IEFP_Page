@@ -8,6 +8,7 @@ function nextSection() {
         navCount -= 1;
     }
     showSection(cardIndex += 1);
+    validateName();
 }
 function prevSection() {
     navCount += 1;
@@ -144,3 +145,18 @@ function postalFocus() {
     }
   });
 }
+
+// validations
+
+function validateField(data_name) {
+  const field = document.querySelector(`[data-formulario="${data_name}"]`);
+  const pattern = new RegExp(field.getAttribute('pattern'));
+  //const pattern = /^[a-zA-Z]+((\s|\.)[a-zA-Z]+)+/
+
+  //field.addEventListener('blur', (e))
+  if(!pattern.test(field.value)){
+    field.setCustomValidity("Formato incorreto !");
+  }
+  
+}
+

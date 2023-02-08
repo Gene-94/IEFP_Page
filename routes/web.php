@@ -15,17 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
-Route::get('/form', function () {
+
+Route::get('/formulario', function () {
     return view('form/form');
 });
-*/
 
+
+/*
 Route::get('/dashboard', function(){
     return view('dashboard/area_trabalho');
 });
+*/
 
-Route::get('/editar_opcoes', [AdminController::class, 'edit_options']);
+Route::get('/admin/dashboard', [AdminController::class, 'showDashboard']);
+
+Route::get('/admin/opcoes', [AdminController::class, 'show_options']);
+Route::post('/admin/opcoes/editar', [AdminController::class, 'edit_option']);
+Route::post('/admin/opcoes/apagar', [AdminController::class, 'delete_option']);
 
 
 /*
@@ -35,8 +41,8 @@ Route::get('/tailwind_form', function () {
 */
 
 
-Route::post('/formulario', function () {
-    return redirect('/');
+Route::get('/form', function () {
+    return redirect('/formulario');
 });
 
 Route::get('/dashboard', function () {
