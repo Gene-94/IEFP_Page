@@ -1,72 +1,94 @@
-<div class="fomrSection inicial fade">
-    <div class="font-bold text-gray-600 text-xs leading-8 uppercase h-6 mx-2 mt-3"> Tipo de Documento</div>
-    <div class="w-full flex-1 mx-2 ">
-        <div class="bg-white my-2 p-1 flex border border-gray-200 rounded ">
-            <select name="tipoDoc" class="no-border p-1 px-2 appearance-none outline-none w-full text-gray-800">
-                <option value="1">Cartão Cidadão</option>
+<div class="inicial fade" data-layout="formSection">
+    <div class="h-6 mx-2 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Tipo de Documento</div>
+    <div class="flex-1 w-full mx-2 ">
+        <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
+            <select name="tipoDoc" data-formulario="tipoDoc" onblur="validateField('tipoDoc')" required
+                class="w-full p-1 px-2 text-gray-800 appearance-none rounded">
+                <option value="" selected>-- Escolha o seu tipo de ID --</option>
+                <option value="5">Cartão Cidadão</option>
                 <option value="2">Bilhete Identidade</option>
-                <option value="3">Autorização de rezidencia</option>
+                <option value="3">Autorização de residência</option>
                 <option value="4">Passaporte</option>
+                @foreach ($tiposDoc as $tipo)
+                    <option value="{{ $tipo->id }}">{{ $tipo->tipo }}</option>
+                @endforeach
             </select>
         </div>
+        <p class="hidden text-sm text-red-600" data-invalid="tipoDoc">*Escolha um tipo de documento de identificação</p>
     </div>
     <div class="flex flex-col md:flex-row">
-        <div class="w-full mx-2 flex-1 ">
-            <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> Número do Documento</div>
-            <div class="bg-white my-2 p-1 flex border border-gray-200 rounded ">
-                <input name="nrDoc" placeholder="XXX-XXX-XXX" class="p-1 px-2 appearance-none outline-none w-full text-gray-800">
+        <div class="flex-1 w-full mx-2 ">
+            <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Número do Documento</div>
+            <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
+                <input name="nrDoc" placeholder="AA000000" data-formulario="nrDoc" onblur="validateField('nrDoc')"
+                    required maxlength="50" class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
             </div>
+            <p class="hidden text-sm text-red-600" data-invalid="tipoDoc">*Insira o seu número de documento tal como
+                esta indicado neste</p>
         </div>
-        <div class="w-full mx-2 flex-1 ">
-            <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> Valido até</div>
-            <div class="bg-white my-2 p-1 flex border border-gray-200 rounded ">
-                <input name="validadeDoc" type="date" class="no-border p-1 px-2 appearance-none outline-none w-full text-gray-800">
+        <div class="flex-1 w-full mx-2 ">
+            <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Valido até</div>
+            <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
+                <input name="validadeDoc" type="date" data-formulario="validadeDoc"
+                    onblur="validateField('validadeDoc')" required
+                    class="w-full p-1 px-2 text-gray-800 appearance-none rounded">
             </div>
+            <p class="hidden text-sm text-red-600" data-invalid="tipoDoc">*Indique ate quando e´ valido o seu documento
+            </p>
         </div>
     </div>
     <div class="flex flex-col md:flex-row">
-        
 
-        <div class="w-full flex-1 mx-2 ">
-            <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> NIF</div>
-            <div class="datepicker bg-white my-2 p-1 flex border border-gray-200 rounded "
-                >
-                <input name="nif"
-                    class="form-control block p-1 px-2 appearance-none outline-none w-full text-gray-800"
-                    placeholder="Número de Identificação Fiscal" >
+
+        <div class="flex-1 w-full mx-2 ">
+            <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> NIF</div>
+            <div class="flex p-1 my-2 bg-white border border-gray-200 rounded datepicker ">
+                <input name="nif" data-formulario="nif" pattern="\d{9}" onblur="validateField('nif')" required
+                    maxlength="9" class="w-full p-1 px-2 text-gray-800 rounded appearance-none"
+                    placeholder="Número de Identificação Fiscal">
             </div>
+            <p class="hidden text-sm text-red-600" data-invalid="tipoDoc">*Insira um Número de Identificação Fiscal
+                (Finanças), valido (9 dígitos)
+            </p>
         </div>
-        <div class="w-full flex-1 mx-2 ">
-            <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> NISS</div>
-            <div class="datepicker bg-white my-2 p-1 flex border border-gray-200 rounded "
-                >
-                <input name="niss"
-                    class="form-control block p-1 px-2 appearance-none outline-none w-full text-gray-800"
-                    placeholder="Nr Segurança Social">
+        <div class="flex-1 w-full mx-2 ">
+            <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> NISS</div>
+            <div class="flex p-1 my-2 bg-white border border-gray-200 rounded datepicker ">
+                <input name="niss" data-formulario="niss" pattern="\d{11}" onblur="validateField('niss')" required
+                    maxlength="11" class="w-full p-1 px-2 text-gray-800 rounded appearance-none"
+                    placeholder="Número Segurança Social">
             </div>
+            <p class="hidden text-sm text-red-600" data-invalid="tipoDoc">*Insira um Número de Segurança Social valido
+                (11 dígitos)
+            </p>
         </div>
 
     </div>
     <div class="flex flex-col md:flex-row">
-        
 
-        <div class="w-full flex-1 mx-2 ">
-            <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> Nacionalidade</div>
-            <div class="datepicker bg-white my-2 p-1 flex border border-gray-200 rounded ">
-                <input name="nacionalidade"
-                    class="form-control block p-1 px-2 appearance-none outline-none w-full text-gray-800"
-                    placeholder="Nacional de" >
+
+        <div class="flex-1 w-full mx-2 ">
+            <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Nacionalidade</div>
+            <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
+                <select name="nacionalidade" data-formulario="nacionalidade" onblur="validateField('nacionalidade')"
+                    required class="w-full p-1 px-2 text-gray-800 appearance-none rounded">
+                    @foreach ($paises as $pais)
+                        <option value="{{ $pais->id }}">{{ $pais->nome }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
     </div>
     <div class="flex flex-col md:flex-row">
-        <div class="w-full flex-1 mx-2 ">
-            <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> Naturalidade</div>
-            <div class="datepicker bg-white my-2 p-1 flex border border-gray-200 rounded "
-                >
-                <input name="naturalidade"
-                    class="form-control block p-1 px-2 appearance-none outline-none w-full text-gray-800"
-                    placeholder="Pais de Origem">
+        <div class="flex-1 w-full mx-2 ">
+            <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Naturalidade</div>
+            <div class="flex p-1 my-2 bg-white border border-gray-200 rounded">
+                <select name="naturalidade" data-formulario="naturalidade" onblur="validateField('naturalidade')"
+                    required class="w-full p-1 px-2 text-gray-800 appearance-none rounded">
+                    @foreach ($paises as $pais)
+                        <option value="{{ $pais->id }}">{{ $pais->nome }}</option>
+                    @endforeach
+                </select>
             </div>
         </div>
 

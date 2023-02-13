@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'App\\Console\\Kernel' => $baseDir . '/app/Console/Kernel.php',
     'App\\Exceptions\\Handler' => $baseDir . '/app/Exceptions/Handler.php',
+    'App\\Http\\Controllers\\AdminController' => $baseDir . '/app/Http/Controllers/AdminController.php',
     'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => $baseDir . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
     'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => $baseDir . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
@@ -46,6 +47,7 @@ return array(
     'App\\Models\\RegimePresenca' => $baseDir . '/app/Models/RegimePresenca.php',
     'App\\Models\\Requisito' => $baseDir . '/app/Models/Requisito.php',
     'App\\Models\\SitProf_Subsidio' => $baseDir . '/app/Models/SitProf_Subsidio.php',
+    'App\\Models\\Teste' => $baseDir . '/app/Models/Teste.php',
     'App\\Models\\TipoDocumento' => $baseDir . '/app/Models/TipoDocumento.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',

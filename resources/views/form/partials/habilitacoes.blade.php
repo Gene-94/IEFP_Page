@@ -1,8 +1,9 @@
-<div class="fomrSection inicial fade">
+<div class="inicial fade" data-layout="formSection">
     <div class="font-bold text-gray-600 text-xs leading-8 uppercase h-6 mx-2 mt-3"> Habilitações</div>
     <div class="w-full flex-1 mx-2 ">
         <div class="bg-white my-2 p-1 flex border border-gray-200 rounded ">
-            <select name="estadoCivil" required class="no-border p-1 px-2 appearance-none outline-none w-full text-gray-800">
+            <select name="estadoCivil" required
+                class="no-border p-1 px-2 appearance-none outline-none w-full text-gray-800">
                 <option value="< a 4 ano">Inferior a 4º ano</option>
                 <option value="4 ano">1º Ciclo (4º ano)</option>
                 <option value="2º ciclo">2º Ciclo (6º ano)</option>
@@ -27,9 +28,10 @@
         <div class="w-full mx-2 flex-1 ">
             <div class="font-bold h-6 mt-3 text-gray-600 text-xs leading-8 uppercase"> Ano de Conclusão</div>
             <div class="bg-white my-2 p-1 flex border border-gray-200 rounded ">
-                <select name="anoConclusao" class="no-border p-1 px-2 appearance-none outline-none w-full text-gray-800">
+                <select name="anoConclusao"
+                    class="no-border p-1 px-2 appearance-none outline-none w-full text-gray-800">
                     <?php for ($year = (int)date('Y'); 1950 <= $year; $year--): ?>
-                        <option value="<?=$year;?>"><?=$year;?></option>
+                    <option value="<?= $year ?>"><?= $year ?></option>
                     <?php endfor; ?>
                 </select>
             </div>

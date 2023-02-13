@@ -1,9 +1,9 @@
-
-<div class="gmx-4 p-4" >
-    @include('form.partials.iefp_banner')    
-    <div class="flex items-center" id="progressBar">
-        <div class="colors flex items-center text-gray-500 relative">
-            <div class="progress-icon rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300" >
+<div class="p-4 gmx-4">
+    @include('form.partials.iefp_banner')
+    <div class="flex items-center" data-layout="progressBar">
+        <div class="relative flex items-center text-gray-500" data-layout="progress-colors">
+            <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
+                data-layout="progress-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-user-plus ">
@@ -13,12 +13,15 @@
                     <line x1="23" y1="11" x2="17" y2="11"></line>
                 </svg>
             </div>
-            <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium progress-text uppercase text-gray-500">
+            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+                data-layout="progress-text">
                 Identificação</div>
         </div>
-        <div class="progress-line flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300" id=""></div>
-        <div class="colors flex items-center text-gray-500 relative" id="step_imorada">
-            <div class="progress-icon rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
+        <div class="flex-auto transition duration-500 ease-in-out border-t-2 border-gray-300"
+            data-layout="progress-line" id=""></div>
+        <div class="relative flex items-center text-gray-500" data-layout="progress-colors" id="step_imorada">
+            <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
+                data-layout="progress-icon">
                 <svg width="100%" height="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-mail ">
@@ -28,12 +31,15 @@
                 </svg>
 
             </div>
-            <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium progress-text uppercase text-gray-500">
+            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+                data-layout="progress-text">
                 Morada</div>
         </div>
-        <div class="progress-line flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300"></div>
-        <div class="colors flex items-center text-gray-500 relative">
-            <div class="progress-icon rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
+        <div class="flex-auto transition duration-500 ease-in-out border-t-2 border-gray-300"
+            data-layout="progress-line"></div>
+        <div class="relative flex items-center text-gray-500" data-layout="progress-colors">
+            <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
+                data-layout="progress-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-database ">
@@ -42,12 +48,15 @@
                     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                 </svg>
             </div>
-            <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium progress-text uppercase text-gray-500">
+            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+                data-layout="progress-text">
                 Habilitações</div>
         </div>
-        <div class="progress-line flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300"></div>
-        <div class="colors flex items-center text-gray-500 relative">
-            <div class="progress-icon rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
+        <div class="flex-auto transition duration-500 ease-in-out border-t-2 border-gray-300"
+            data-layout="progress-line"></div>
+        <div class="relative flex items-center text-gray-500" data-layout="progress-colors">
+            <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
+                data-layout="progress-icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                     class="feather feather-database ">
@@ -56,21 +65,25 @@
                     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                 </svg>
             </div>
-            <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium progress-text uppercase text-gray-500">
+            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase progress-icon"
+                data-layout="progress-text">
                 Sit. Profissional</div>
         </div>
-        <div class="progress-line flex-auto border-t-2 transition duration-500 ease-in-out border-gray-300"></div>
-        <div class="colors flex items-center text-gray-500 relative">
-            <div class="progress-icon rounded-full transition duration-500 ease-in-out h-12 w-12 py-3 border-2 border-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-database ">
+        <div class="flex-auto transition duration-500 ease-in-out border-t-2 border-gray-300"
+            data-layout="progress-line"></div>
+        <div class="relative flex items-center text-gray-500" data-layout="progress-colors">
+            <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
+                data-layout="progress-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-database ">
                     <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
                     <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
                     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                 </svg>
             </div>
-            <div class="absolute top-0 -ml-10 text-center mt-16 w-32 text-xs font-medium progress-text uppercase text-gray-500">
+            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+                data-layout="progress-text">
                 Formação</div>
         </div>
-</div>
+    </div>

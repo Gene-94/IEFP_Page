@@ -342,8 +342,8 @@ class ComposerStaticInit71b4fd8fb790b501455d6e308f16248e
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
-            1 => __DIR__ . '/..' . '/psr/http-factory/src',
+            0 => __DIR__ . '/..' . '/psr/http-factory/src',
+            1 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -536,6 +536,7 @@ class ComposerStaticInit71b4fd8fb790b501455d6e308f16248e
     public static $classMap = array (
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
         'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
@@ -574,6 +575,7 @@ class ComposerStaticInit71b4fd8fb790b501455d6e308f16248e
         'App\\Models\\RegimePresenca' => __DIR__ . '/../..' . '/app/Models/RegimePresenca.php',
         'App\\Models\\Requisito' => __DIR__ . '/../..' . '/app/Models/Requisito.php',
         'App\\Models\\SitProf_Subsidio' => __DIR__ . '/../..' . '/app/Models/SitProf_Subsidio.php',
+        'App\\Models\\Teste' => __DIR__ . '/../..' . '/app/Models/Teste.php',
         'App\\Models\\TipoDocumento' => __DIR__ . '/../..' . '/app/Models/TipoDocumento.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',

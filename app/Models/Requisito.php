@@ -15,7 +15,7 @@ class Requisito extends Model
     ];
 
 
-
+    
 
 
     protected $table = 'requisitos';

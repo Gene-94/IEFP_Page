@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/form', [FormController::class, 'load_form']);
 
 Route::get('/formulario', function () {
-    return view('form/form');
+    return redirect('/form');
 });
 
 
@@ -41,9 +43,6 @@ Route::get('/tailwind_form', function () {
 */
 
 
-Route::get('/form', function () {
-    return redirect('/formulario');
-});
 
 Route::get('/dashboard', function () {
     return view('dashboard');

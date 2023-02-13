@@ -1,5 +1,5 @@
 import './bootstrap';
-
+//import './form.js';
 
 function openMenu(bool) {
    alert();
@@ -28,3 +28,4 @@ function deleteOption(nome) {
    }
    return "submit";
 }
+
