@@ -16,7 +16,7 @@ class ConcelhosTableSeeder extends Seeder
     public function run()
     {
         
-        Concelho::create(
+        $concelhos = [
             ["nome" => "Águeda"],
             ["nome" => "Albergaria-a-Velha"],
             ["nome" => "Anadia"],
@@ -325,7 +325,7 @@ class ConcelhosTableSeeder extends Seeder
             ["nome" => "Lajes das Flores"],
             ["nome" => "Santa Cruz das Flores"],
             ["nome" => "Corvo"],
-        );
+        ];
 
     }
 }

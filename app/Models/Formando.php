@@ -17,23 +17,24 @@ class Formando extends Model
         'email',
         'telemovel',
         'data_nascimento',
-        //'tipo_documento_id',
+        'tipo_documento_id',
+        'estado_civil_idd',
         'nr_documento',
         'niss',
         'nif',
-        //'nacionalidade_id',
-        //'naturalidade_id',
-        //'habilitacoes_id',
+        'nacionalidade_id',
+        'naturalidade_id',
+        'habilitacoes_id',
         'area_curso',
         'ano_conclusao',
         'estabelecimento_enino',
         'certificado',
-        //'sit_prof_subsidio_id',
+        'sit_prof_subsidio_id',
         'tempo_em_meses_empregado',
         'ultima_proff',
-        //'empresa_id',
+        'empresa_id',
         'morada',
-        //'id_concelho',
+        'id_concelho',
         'cod_postal'
     ];
 
@@ -45,6 +46,10 @@ class Formando extends Model
 
     public function tipoDocumento(){
         return $this->belongsTo(TipoDocumento::class, 'tipo_documento_id')->value('tipo');
+    }
+
+    public function estadoCivil(){
+        return $this->belongsTo(EstadoCivil::class, 'estado_civil_id')->value('tipo');
     }
 
     public function nacionalidade(){

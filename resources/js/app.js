@@ -14,7 +14,7 @@ function openMenu(bool) {
 }
 
 function addOption(){
-
+   
 }
 
 function editOption() {

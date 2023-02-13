@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('email', 255);
             $table->string('telemovel', 20);
             $table->date('data_nascimento');
-            $table->unsignedTinyInteger('tipo_documento_id'); // foreign key de TiposDocumento, modelo deve devolver logo o nome
+            $table->unsignedTinyInteger('tipo_documento_id');
+            $table->unsignedTinyInteger('estado_civil_id'); // foreign key de TiposDocumento, modelo deve devolver logo o nome
             $table->string('nr_documento', 50);
             $table->date('validade_documento');
             $table->string('niss', 15);
@@ -40,6 +41,7 @@ return new class extends Migration
             $table->string('cod_postal', 10);
             $table->timestamps();
 
+            $table->foreign('estado_civil_id')->references('id')->on('estados_civis');
             $table->foreign('tipo_documento_id')->references('id')->on('tipos_documento');
             $table->foreign('nacionalidade_id')->references('id')->on('paises');
             $table->foreign('naturalidade_id')->references('id')->on('paises');

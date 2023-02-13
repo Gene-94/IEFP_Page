@@ -37,11 +37,12 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Estado Civil</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <select name="estadoCivil" class="w-full p-1 px-2 text-gray-800 outline-none appearance-none no-border">
-                    <option value="1">Solteiro</option>
-                    <option value="2">Casado</option>
-                    <option value="3">Divorciado</option>
-                    <option value="4">Viuvo</option>
+                <select name="estadoCivil" data-formulario="estadoCivil"
+                class="w-full p-1 px-2 text-gray-800 appearance-none rounded">
+                    <option value="">-- Escolha o seu estado civil --</option>
+                    @foreach ($estadosCivis as $estado)
+                        <option value="{{ $estado->id }}">{{ $pais->nome }}</option>
+                    @endforeach
                 </select>
             </div>
         </div>
