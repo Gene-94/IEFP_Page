@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('estados_civils', function (Blueprint $table) {
+        Schema::create('estados_civis', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('tipo');
             $table->timestamps();
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estados_civils');
+        Schema::dropIfExists('estados_civis');
     }
 };

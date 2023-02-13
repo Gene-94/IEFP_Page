@@ -5,10 +5,6 @@
             <select name="tipoDoc" data-formulario="tipoDoc" onblur="validateField('tipoDoc')" required
                 class="w-full p-1 px-2 text-gray-800 appearance-none rounded">
                 <option value="" selected>-- Escolha o seu tipo de ID --</option>
-                <option value="5">Cartão Cidadão</option>
-                <option value="2">Bilhete Identidade</option>
-                <option value="3">Autorização de residência</option>
-                <option value="4">Passaporte</option>
                 @foreach ($tiposDoc as $tipo)
                     <option value="{{ $tipo->id }}">{{ $tipo->tipo }}</option>
                 @endforeach

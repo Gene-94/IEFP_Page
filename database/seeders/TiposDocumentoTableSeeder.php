@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\TipoDocumento;
 
 class TiposDocumentoTableSeeder extends Seeder
 {
@@ -15,10 +16,17 @@ class TiposDocumentoTableSeeder extends Seeder
     public function run()
     {
         
-
-        \DB::table('tipos_documento')->delete();
+        $tiposDoc = [
+            ["tipo" => "Cartão de Cidadão"],
+            ["tipo" => "Bilhete de Identificação"],
+            ["tipo" => "Titulo de Residencia"],
+            ["tipo" => "Passaporte"],
+            ["tipo" => "Outro"],
+        ];
         
-        
+        foreach($tiposDoc as $tipo){
+            TipoDocumento::create($tipo);
+        }
         
     }
 }

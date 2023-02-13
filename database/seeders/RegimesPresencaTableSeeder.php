@@ -15,9 +15,7 @@ class RegimesPresencaTableSeeder extends Seeder
     public function run()
     {
         
-
-        \DB::table('regimes_presenca')->delete();
-        
+  
         
         
     }

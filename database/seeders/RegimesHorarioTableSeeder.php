@@ -16,8 +16,6 @@ class RegimesHorarioTableSeeder extends Seeder
     {
         
 
-        \DB::table('regimes_horario')->delete();
-        
         
         
     }

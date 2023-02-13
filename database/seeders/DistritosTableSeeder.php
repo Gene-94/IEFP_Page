@@ -15,9 +15,7 @@ class DistritosTableSeeder extends Seeder
     public function run()
     {
         
-
-        \DB::table('distritos')->delete();
-        
+    
         
         
     }

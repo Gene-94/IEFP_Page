@@ -13,11 +13,7 @@ class CoordenadoresTableSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        
-
-        \DB::table('coordenadores')->delete();
-        
+    {    
         
         
     }

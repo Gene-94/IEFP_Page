@@ -14,11 +14,7 @@ class NrTrabalhadoresOpcoesTableSeeder extends Seeder
      */
     public function run()
     {
-        
 
-        \DB::table('nr_trabalhadores__opcoes')->delete();
-        
-        
         
     }
 }

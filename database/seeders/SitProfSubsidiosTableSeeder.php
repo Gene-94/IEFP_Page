@@ -15,10 +15,7 @@ class SitProfSubsidiosTableSeeder extends Seeder
     public function run()
     {
         
-
-        \DB::table('sit_prof_subsidios')->delete();
         
-        
-        
+  
     }
 }

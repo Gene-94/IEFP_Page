@@ -191,5 +191,23 @@ function validateField(data_name) {
   
 }
 
+function limitSize(identifier, n = 0) {
+  input = document.querySelector(`[data-formulario="${identifier}"]`);
+  if(n==-1){
+    n = input.getAttribute('maxlength');
+    alert(1);
+  }
+  input.addEventListener('input', (e) => {
+  let length = e.target.value.length; 
+  alert(length);
+    if(length >= n){
+      alert((e.target.value).substring(0,n));
+      e.target.value = (e.target.value).substring(0,n);
+      postal.blur();
+    }
+  });
+}
+
+
 
 

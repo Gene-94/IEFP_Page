@@ -15,10 +15,7 @@ class EstadosInscricaoTableSeeder extends Seeder
     public function run()
     {
         
-
-        \DB::table('estados_inscricao')->delete();
-        
-        
+ 
         
     }
 }

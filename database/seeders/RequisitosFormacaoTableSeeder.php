@@ -16,9 +16,7 @@ class RequisitosFormacaoTableSeeder extends Seeder
     {
         
 
-        \DB::table('requisitos_formacao')->delete();
-        
-        
+    
         
     }
 }

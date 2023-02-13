@@ -16,8 +16,7 @@ class EmpresasTableSeeder extends Seeder
     {
         
 
-        \DB::table('empresas')->delete();
-        
+  
         
         
     }

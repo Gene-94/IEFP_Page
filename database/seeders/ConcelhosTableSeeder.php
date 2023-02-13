@@ -15,7 +15,7 @@ class ConcelhosTableSeeder extends Seeder
      */
     public function run()
     {
-        
+        /*
         $concelhos = [
             ["nome" => "Águeda"],
             ["nome" => "Albergaria-a-Velha"],
@@ -326,6 +326,6 @@ class ConcelhosTableSeeder extends Seeder
             ["nome" => "Santa Cruz das Flores"],
             ["nome" => "Corvo"],
         ];
-
+        */
     }
 }

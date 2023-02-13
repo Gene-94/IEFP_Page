@@ -16,8 +16,6 @@ class HabilitacoesTableSeeder extends Seeder
     {
         
 
-        \DB::table('habilitacoes')->delete();
-        
         
         
     }

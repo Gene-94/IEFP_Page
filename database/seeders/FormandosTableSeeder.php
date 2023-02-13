@@ -16,9 +16,6 @@ class FormandosTableSeeder extends Seeder
     {
         
 
-        \DB::table('formandos')->delete();
-        
-        
         
     }
 }

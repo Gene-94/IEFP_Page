@@ -16,9 +16,7 @@ class FormacoesTableSeeder extends Seeder
     {
         
 
-        \DB::table('formacoes')->delete();
-        
-        
+
         
     }
 }

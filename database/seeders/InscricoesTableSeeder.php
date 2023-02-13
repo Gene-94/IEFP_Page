@@ -15,10 +15,7 @@ class InscricoesTableSeeder extends Seeder
     public function run()
     {
         
-
-        \DB::table('inscricoes')->delete();
-        
-        
+  
         
     }
 }
