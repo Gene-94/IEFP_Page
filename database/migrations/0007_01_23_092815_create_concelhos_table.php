@@ -17,6 +17,7 @@ return new class extends Migration
             $table->smallIncrements('id');
             $table->string('nome',50);
             $table->unsignedTinyInteger('distrito_id');
+            $table->timestamps();
 
             $table->foreign('distrito_id')->references('id')->on('distritos');
         });

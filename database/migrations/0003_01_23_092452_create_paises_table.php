@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('paises', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('nome', 50);
+            $table->timestamps();
         });
     }
 

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->tinyIncrements('id');
             $table->string('nome', 255);
             $table->string('detalhes', 500)->nullable();
+            $table->timestamps();
         });
     }
 

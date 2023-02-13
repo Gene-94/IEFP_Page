@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('regimes_presenca', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('nome_regime', 255);
+            $table->timestamps();
         });
     }
 

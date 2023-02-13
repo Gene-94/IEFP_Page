@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('requisitos_formacao', function (Blueprint $table) {
             $table->unsignedTinyInteger('requisito_id');
             $table->unsignedBigInteger('formacao_id');
+            $table->timestamps();
 
             $table->foreign('requisito_id')->references('id')->on('requisitos');
             $table->foreign('formacao_id')->references('id')->on('formacoes');

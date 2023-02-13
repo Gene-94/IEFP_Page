@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('nr_trabalhadores__opcoes', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('nome_opcao');
+            $table->timestamps();
         });
     }
 

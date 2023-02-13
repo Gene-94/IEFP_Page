@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('distritos', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('nome',25);
+            $table->timestamps();
         });
     }
 

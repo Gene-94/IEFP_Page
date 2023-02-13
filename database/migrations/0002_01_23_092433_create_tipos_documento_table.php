@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('tipos_documento', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('tipo', 50);
+            $table->timestamps();
         });
     }
 

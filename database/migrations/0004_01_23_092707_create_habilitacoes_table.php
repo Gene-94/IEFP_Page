@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('habilitacoes', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('nome_descritivo', 255);
+            $table->timestamps();
         });
     }
 

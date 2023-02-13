@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('estados_inscricao', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('nome_estado');
+            $table->timestamps();
         });
     }
 

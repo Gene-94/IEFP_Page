@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('requisitos', function (Blueprint $table) {
             $table->tinyIncrements('id');
             $table->string('nome', 255);
+            $table->timestamps();
         });
     }
 
