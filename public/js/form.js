@@ -17,7 +17,7 @@ function nextSection() {
   for(let i=0; i<invalid.length; i++){
     
     
-    if(!invalid[i].classList.contains("hidden")){
+    if(!invalid[i].classList.contains("hidden") && navCount == 0){
       return;
     }
   }
@@ -32,8 +32,6 @@ function prevSection() {
     navCount += 1;
     showSection(cardIndex -= 1);
 }
-
-
 
 
 function showSection(n) {
@@ -167,24 +165,24 @@ function validateField(data_name) {
   //const pattern = /^[a-zA-Z]+((\s|\.)[a-zA-Z]+)+/
 
   //field.addEventListener('blur', (e))
-  field.value = field.value.trim();
+  const trimmed = field.value.trim();
   
   //if(typeof pattern !== 'undefined'){
   if(pattern == "/null/"){  
-    invalid = field.value === "";
+    invalid = trimmed === "";
   }
   else{
-    invalid = !pattern.test(field.value);
+    invalid = !pattern.test(trimmed);
   }
   if(invalid){
-    field.classList.remove('outline-blue-600');
+    //field.classList.remove('outline-blue-600');
     field.classList.add('outline', 'outline-red-600');
     error_msg.classList.remove('hidden');
     error_msg.classList.add('block');
     
   }else{
     field.classList.remove('outline', 'outline-red-600');
-    field.classList.add('outline-blue-600');
+    //field.classList.add('outline-blue-600');
     error_msg.classList.add('hidden');
     error_msg.classList.remove('block');
   }

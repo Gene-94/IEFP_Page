@@ -39,7 +39,7 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Data Nascimento</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded">
                 <input name="dataNasc" type="date" data-formulario="dataNasc" onblur="validateField('dataNasc')"
-                    required class="w-full p-1 px-2 text-gray-800 appearance-none rounded">
+                    required class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="dataNasc">*Insira uma data de nascimento</p>
         </div>
