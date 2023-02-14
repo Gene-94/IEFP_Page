@@ -199,13 +199,32 @@ function limitSize(identifier, n = 0) {
   }
   input.addEventListener('input', (e) => {
   let length = e.target.value.length; 
-  alert(length);
     if(length >= n){
-      alert((e.target.value).substring(0,n));
       e.target.value = (e.target.value).substring(0,n);
       postal.blur();
     }
   });
+}
+
+function mostrarConcelhos() {
+
+  const distrito = document.querySelector('[data-formulario="distrito"]');
+  const concelhos = document.querySelectorAll('[data-formulario-option="concelho"]');
+    for(let i=0;i<concelhos.length;i++){
+      var distrito_id = concelhos[i].getAttribute('data-target-distrito');
+      if(distrito_id == distrito.value){
+        concelhos[i].classList.remove('hidden');
+      }
+      else{
+        if(!concelhos[i].classList.contains('hidden')){
+          concelhos[i].classList.add('hidden');
+        }
+      }
+    }
+  const concelho = document.querySelector('[data-formulario="concelho"]');
+  concelho.value = "";
+
+  
 }
 
 

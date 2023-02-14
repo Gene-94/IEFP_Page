@@ -29,6 +29,7 @@
                 <input name="tlm" placeholder="Número de Telemóvel" data-formulario="tel"
                     onblur="validateField('tel')" required
                     pattern="^((\+|0{2})\d{1,3}[-\s]?)?(\d{9,11}|(\d{3}\s\d{3}\s\d{3}))$"
+                    maxlength="16"
                     class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="tel">*Insira um numero de telefone valido</p>

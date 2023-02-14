@@ -17,7 +17,7 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Número do Documento</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
                 <input name="nrDoc" placeholder="AA000000" data-formulario="nrDoc" onblur="validateField('nrDoc')"
-                    required maxlength="50" class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
+                    required maxlength="25" class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="nrDoc">*Insira o seu número de documento tal como
                 esta indicado neste</p>

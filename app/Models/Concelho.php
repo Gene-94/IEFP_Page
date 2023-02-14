@@ -11,7 +11,8 @@ class Concelho extends Model
 
 
     protected $fillable = [
-        'nome'
+        'nome',
+        'distrito_id'
     ];
 
 

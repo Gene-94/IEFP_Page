@@ -1,4 +1,4 @@
-with open('concelhos') as f:
+with open('distritos') as f:
 	lines = f.readlines()
 	for line in lines:
-		print('\"'+line.strip()+'\",')
+		print('["nome" => \"'+line.strip()+'\"],')
