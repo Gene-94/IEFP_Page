@@ -4,19 +4,19 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\SoftDeletes;
+//use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Formacao extends Model
 {
     use HasFactory;
 
-    use SoftDeletes;
+    //use SoftDeletes;
     
     protected $fillable = [
         'nome',
         'descricao',
-        //'regime_presenca_id',
-        //'regime_horario_id',
+        'regime_presenca_id',
+        'regime_horario_id',
         'duracao_horas',
         'data_inicio_prevista'
     ];

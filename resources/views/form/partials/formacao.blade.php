@@ -13,10 +13,7 @@
     <div class="flex flex-col md:flex-row">
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Requisitos</div>
-            <p>Abaixo estão indicados os requisitos para a formaçã
-                
-                
-                56  o.</p>
+            <p>Abaixo estão indicados os requisitos para a formação.</p>
             <p>Selecione os requ que estão em falta e pertende solicitar ao IEFP</p>
             <div class="flex p-1 my-2 bg-white ">
                 <!-- foreach loop  -->

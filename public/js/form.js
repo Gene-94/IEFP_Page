@@ -17,7 +17,7 @@ function nextSection() {
   for(let i=0; i<invalid.length; i++){
     
     
-    if(!invalid[i].classList.contains("hidden") && navCount == 0){
+    if(!invalid[i].classList.contains("hidden")){
       return;
     }
   }
@@ -28,7 +28,12 @@ function nextSection() {
     }
     showSection(cardIndex += 1);
 }
+
 function prevSection() {
+  const invalid = document.querySelectorAll("[data-invalid]");
+  for(let i=0; i<invalid.length; i++){
+    invalid[i].classList.add("hidden");
+  }
     navCount += 1;
     showSection(cardIndex -= 1);
 }
@@ -223,6 +228,69 @@ function mostrarConcelhos() {
   concelho.value = "";
 
   
+}
+
+/*
+function sitProff_layoutListener() {
+  const situacao = document.querySelector('[data-layout="SitProf-selector"]');
+  situacao.addEventListener('change', (e) => {
+    const layout = document.querySelectorAll('[data-layout="SitProf"]');
+    let tipo = e.target.value; 
+    for(var i = 0; i<layout.length; i++){
+      layout[i].classList.add('hidden');
+      var inputs = []
+        .concat(Array.from(layout[i].getElementsByTagName('input')))
+        .concat(Array.from(layout[i].getElementsByTagName('select')))
+      for(var i = 0; i<inputs.length; i++) {
+        inputs[i].value = ""
+      }
+    }
+      if(tipo == 1){
+        //empregado
+        layout[i].classList.remove('hidden');
+      }
+      else if(tipo == 2) {
+        //desempregado
+        layout[i].classList.remove('hidden');
+      }
+      else if(tipo == 3) {
+        //estudante
+        layout[i].classList.remove('hidden');
+      }
+    });
+
+}
+*/
+
+function sitProff_layoutListener() {
+  const situacao = document.querySelector('[data-layout="SitProf-selector"]');
+  const layout = document.querySelectorAll('[data-layout="SitProf"]');
+  let tipo = situacao.value; 
+  for(let i = 0; i<layout.length; i++){
+    layout[i].classList.add('hidden');
+    var inputs = []
+      .concat(Array.from(layout[i].getElementsByTagName('input')))
+      .concat(Array.from(layout[i].getElementsByTagName('select')))
+      .concat(Array.from(layout[i].getElementsByTagName('textarea')));
+    for(var j = 0; j<inputs.length; j++) {
+      inputs[i].value = "";
+      inputs[i].checked = false;
+    }
+  }
+    if(tipo == 1){
+      //empregado
+      layout[0].classList.remove('hidden');
+    }
+    else if(tipo == 2) {
+      //desempregado
+      layout[1].classList.remove('hidden');
+    }
+    /*
+    else if(tipo == 3) {
+      //estudante
+      layout[2].classList.remove('hidden');
+    }
+    */
 }
 
 
