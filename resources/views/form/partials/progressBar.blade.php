@@ -13,7 +13,7 @@
                     <line x1="23" y1="11" x2="17" y2="11"></line>
                 </svg>
             </div>
-            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+            <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
                 data-layout="progress-text">
                 Identificação</div>
         </div>
@@ -31,7 +31,7 @@
                 </svg>
 
             </div>
-            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+            <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
                 data-layout="progress-text">
                 Morada</div>
         </div>
@@ -48,7 +48,7 @@
                     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                 </svg>
             </div>
-            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+            <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
                 data-layout="progress-text">
                 Habilitações</div>
         </div>
@@ -65,7 +65,7 @@
                     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                 </svg>
             </div>
-            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase progress-icon"
+            <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase progress-icon"
                 data-layout="progress-text">
                 Sit. Profissional</div>
         </div>
@@ -82,7 +82,7 @@
                     <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
                 </svg>
             </div>
-            <div class="absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
+            <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
                 data-layout="progress-text">
                 Formação</div>
         </div>
