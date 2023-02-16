@@ -4,13 +4,13 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Regime </div>
             <div class="grid grid-cols-2 gap-3">
                 <div class="col-span-1">
-                    <input type="radio" name="emprego" id="contaPropria" value="1" required >
-                <label for="contaPropria">Por conta propria</label>
+                    <input type="radio" name="emprego" id="contaPropria" value="1" required>
+                    <label for="contaPropria">Por conta propria</label>
                 </div>
                 <div class="col-span-1">
-                    <input type="radio" name="emprego" id="contaOutrem" value="2" required>
+                    <input type="radio" name="emprego" id="contaOutrem" value="2" required selected>
                     <label for="contaOutrem">Por conta de outrem</label>
-                </div>          
+                </div>
             </div>
         </div>
     </div>

@@ -4,13 +4,13 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Tempo em desemprego </div>
             <div class="grid grid-cols-2 gap-3">
                 <div class="col-span-1">
-                    <input type="radio" name="emprego" id="menos1Ano" value="3">
-                <label for="menos1Ano">Inferior a 1 ano</label>
+                    <input type="radio" name="emprego" id="menos1Ano" value="3" selected>
+                    <label for="menos1Ano">Inferior a 1 ano</label>
                 </div>
                 <div class="col-span-1">
                     <input type="radio" name="emprego" id="mais1Ano" value="4">
                     <label for="mais1Ano">Superior a 1 ano</label>
-                </div>          
+                </div>
             </div>
         </div>
     </div>

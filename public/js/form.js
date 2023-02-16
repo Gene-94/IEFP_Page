@@ -38,6 +38,42 @@ function prevSection() {
     showSection(cardIndex -= 1);
 }
 
+function submitWithAcc(btn) {
+  validateField('password');
+  const invalid = document.querySelectorAll("[data-invalid]");
+  const input = document.querySelectorAll("[data-formulario]");
+  
+  for(i=0; i<input.length; i++){
+    input[i].focus();
+    input[i].blur();
+  }
+
+  for(let i=0; i<invalid.length; i++){
+    
+    
+    if(!invalid[i].classList.contains("hidden")){
+      return;
+    }
+  }
+
+  form = document.querySelector('[data-target-form=formulario]');
+  form.submit();
+
+
+}
+
+function confirmPassword(confirm){
+  const password = document.querySelector('[data-formulario=password]');
+  const invalid = document.querySelector('[data-invalid=confirm_password]');
+  if(confirm.value==password.value){
+    invalid.classList.add('hidden');
+    confirm.classList.remove('outline', 'outline-red-600');
+  }else{
+    invalid.classList.remove('hidden');
+    confirm.classList.add('outline', 'outline-red-600');
+  }
+}
+
 
 function showSection(n) {
   
@@ -45,10 +81,12 @@ function showSection(n) {
   //const slides = document.getElementsByClassName("fomrSection");
   const btn_prev = document.querySelector("[data-layout=prevBtn]");
   const btn_next = document.querySelector("[data-layout=nextBtn]");
+  const btns_submit = document.querySelector("[data-layout=submitBtns]");
   const bar = document.querySelector("[data-layout=progressBar]");
   const banner = document.querySelector("[data-layout=iefp_banner]");
   btn_prev.style.display = "block";
   btn_next.style.display = "block";
+  btns_submit.style.display = "none";
   bar.style.display = "none";
   
   
@@ -78,6 +116,7 @@ let step_id_text = document.getElementById("step_id_text");
   if (cardIndex == slides.length-1){
     banner.style.display = "";
     btn_next.style.display = "none";
+    btns_submit.style.display = "";
   }
 
   /*

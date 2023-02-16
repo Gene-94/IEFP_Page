@@ -20,7 +20,7 @@
         @include('form.partials.progressBar')
         <div class="p-4 mt-8">
 
-            <form action="/form" enctype="multipart/form-data" method="POST">
+            <form action="/form" enctype="multipart/form-data" method="POST" data-target-form="formulario">
                 {{ csrf_field() }}
                 @include('form.partials.inicial')
                 @include('form.partials.identificacao')
@@ -30,9 +30,10 @@
                 @include('form.partials.formacao')
                 @include('form.partials.final')
 
-                <div class="flex p-2 mt-4">
+                <div class="flex flex-col-reverse sm:flex-row p-2 mt-4">
                     @include('form.partials.previous_btn')
                     @include('form.partials.next_btn')
+                    @include('form.partials.submit_btns')
                 </div>
             </form>
         </div>
