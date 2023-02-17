@@ -1,0 +1,7 @@
+do validations for 'postal1' and 'postal2' and then join both fields and add to validated $formando assoss array.
+
+how to proceed with validations for file? $formando should only store string with path, probably also validate, store and add path value to array  
+
+change sit prof to just subsidio?? and add a subsidios dropdown to desepregado? -- Done 
+
+validate $empresa fields separatelly, after validation search for nif to check if exists, then by name, if not exists then create else associate new formando to the existing empresa.
