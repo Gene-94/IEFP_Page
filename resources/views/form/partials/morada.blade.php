@@ -13,7 +13,7 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Distrito</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <select name="distrito" data-formulario="distrito" onblur="validateField('distrito')" required
+                <select name="distrito_id" data-formulario="distrito" onblur="validateField('distrito')" required
                     onchange="mostrarConcelhos()"
                     class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
                     <option value="" disabled selected>distrito</option>
@@ -28,7 +28,7 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Concelho</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <select name="concelho" data-formulario="concelho" onblur="validateField('concelho')" required
+                <select name="concelho_id" data-formulario="concelho" onblur="validateField('concelho')" required
                     class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
                     <option value="" selected disabled>concelho</option>
                     @foreach ($concelhos as $concelho)
@@ -47,7 +47,7 @@
         <div class="mx-2 w-full md:w-2/3 lg:w-2/3 xl:w-2/3">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Estado Civil</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <select name="estadoCivil" data-formulario="estadoCivil"
+                <select name="estado_civil_id" data-formulario="estadoCivil"
                     class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
                     <option value="" selected disabled>indique o seu estado civil</option>
                     @foreach ($estadosCivis as $estado)

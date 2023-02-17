@@ -32,9 +32,13 @@ return new class extends Migration
             $table->unsignedSmallInteger('ano_conclusao')->nullable();
             $table->string('estabelecimento_enino', 255)->nullable();
             $table->string('certificado', 255); // path to file
-            $table->unsignedTinyInteger('sit_prof_subsidio_id'); // also foreigh key, this is to allow to add optiom from admin dashboard
+            //$table->unsignedTinyInteger('sit_prof_subsidio_id'); // also foreigh key, this is to allow to add optiom from admin dashboard
+            $table->string('emprego',255);
+            $table->unsignedTinyInteger('subsidio_id');
             $table->smallInteger('tempo_em_meses_empregado')->nullable();
             $table->string('ultima_proff', 255)->nullable();
+            $table->date('inicio_proff')->nullable();
+            $table->date('fim_proff')->nullable();
             $table->unsignedBigInteger('empresa_id')->nullable();  // foreign key
             $table->string('morada', 255);
             $table->unsignedSmallInteger('concelho_id');  // foreign key
@@ -46,7 +50,8 @@ return new class extends Migration
             $table->foreign('nacionalidade_id')->references('id')->on('paises');
             $table->foreign('naturalidade_id')->references('id')->on('paises');
             $table->foreign('habilitacoes_id')->references('id')->on('habilitacoes');
-            $table->foreign('sit_prof_subsidio_id')->references('id')->on('sit_prof_subsidios');
+            //$table->foreign('sit_prof_subsidio_id')->references('id')->on('sit_prof_subsidios');
+            $table->foreign('subsidio_id')->references('id')->on('subsidios');
             $table->foreign('empresa_id')->references('id')->on('empresas');
             $table->foreign('concelho_id')->references('id')->on('concelhos');
         });

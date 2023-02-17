@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/form', [FormController::class, 'load_form']);
+Route::post('form', [FormController::class, 'store_form']);
 
 Route::get('/formulario', function () {
     return redirect('/form');

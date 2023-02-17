@@ -2,7 +2,7 @@
     <div class="h-6 mx-2 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Tipo de Documento</div>
     <div class="flex-1 w-full mx-2 ">
         <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-            <select name="tipoDoc" data-formulario="tipoDoc" onblur="validateField('tipoDoc')" required
+            <select name="tipo_documento_id" data-formulario="tipoDoc" onblur="validateField('tipoDoc')" required
                 class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
                 <option value="" selected disabled>Escolha o seu tipo de ID </option>
                 @foreach ($tiposDoc as $tipo)
@@ -16,8 +16,9 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Número do Documento</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <input name="nrDoc" placeholder="AA000000" data-formulario="nrDoc" onblur="validateField('nrDoc')"
-                    required maxlength="25" class="w-full p-1 px-2 text-gray-800 rounded appearance-none border-none">
+                <input name="nr_documento" placeholder="AA000000" data-formulario="nrDoc"
+                    onblur="validateField('nrDoc')" required maxlength="25"
+                    class="w-full p-1 px-2 text-gray-800 rounded appearance-none border-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="nrDoc">*Insira o seu número de documento tal como
                 esta indicado neste</p>
@@ -25,11 +26,12 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Valido até</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <input name="validadeDoc" type="date" data-formulario="validadeDoc"
+                <input name="validade_documento" type="date" data-formulario="validadeDoc"
                     onblur="validateField('validadeDoc')" required
                     class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
             </div>
-            <p class="hidden text-sm text-red-600" data-invalid="validadeDoc">*Indique ate quando é valido o seu documento
+            <p class="hidden text-sm text-red-600" data-invalid="validadeDoc">*Indique ate quando é valido o seu
+                documento
             </p>
         </div>
     </div>
@@ -66,12 +68,12 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Nacionalidade</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <select name="nacionalidade" data-formulario="nacionalidade" onblur="validateField('nacionalidade')"
+                <select name="nacionalidade_id" data-formulario="nacionalidade" onblur="validateField('nacionalidade')"
                     required class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
                     <option value="" selected disabled>escolha o seu país de cidadania</option>
                     @foreach ($paises as $pais)
                         <option value="{{ $pais->id }}">{{ $pais->nome }}</option>
-                        <!--<option {{$pais->nome=="Portugal"?'selected="selected"':""}} value="{{ $pais->id }}">{{ $pais->nome }}</option>-->
+                        <!--<option {{ $pais->nome == 'Portugal' ? 'selected="selected"' : '' }} value="{{ $pais->id }}">{{ $pais->nome }}</option>-->
                     @endforeach
                 </select>
             </div>
@@ -82,12 +84,12 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Naturalidade</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded">
-                <select name="naturalidade" data-formulario="naturalidade" onblur="validateField('naturalidade')"
+                <select name="naturalidade_id" data-formulario="naturalidade" onblur="validateField('naturalidade')"
                     required class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
                     <option value="" selected disabled>escolha o seu país de origem</option>
                     @foreach ($paises as $pais)
                         <option value="{{ $pais->id }}">{{ $pais->nome }}</option>
-                        <!-- <option {{$pais->nome=="Portugal"?'selected="selected"':""}} value="{{ $pais->id }}">{{ $pais->nome }}</option> -->
+                        <!-- <option {{ $pais->nome == 'Portugal' ? 'selected="selected"' : '' }} value="{{ $pais->id }}">{{ $pais->nome }}</option> -->
                     @endforeach
                 </select>
             </div>

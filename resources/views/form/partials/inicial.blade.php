@@ -26,10 +26,9 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Telemovel</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
-                <input name="tlm" placeholder="Número de Telemóvel" data-formulario="tel"
+                <input name="telemovel" placeholder="Número de Telemóvel" data-formulario="tel"
                     onblur="validateField('tel')" required
-                    pattern="^((\+|0{2})\d{1,3}[-\s]?)?(\d{9,11}|(\d{3}\s\d{3}\s\d{3}))$"
-                    maxlength="16"
+                    pattern="^((\+|0{2})\d{1,3}[-\s]?)?(\d{9,11}|(\d{3}\s\d{3}\s\d{3}))$" maxlength="16"
                     class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="tel">*Insira um numero de telefone valido</p>
@@ -38,8 +37,9 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Data Nascimento</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded">
-                <input name="dataNasc" type="date" data-formulario="dataNasc" onblur="validateField('dataNasc')"
-                    required class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
+                <input name="data_nascimento" type="date" data-formulario="dataNasc"
+                    onblur="validateField('dataNasc')" required
+                    class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="dataNasc">*Insira uma data de nascimento</p>
         </div>

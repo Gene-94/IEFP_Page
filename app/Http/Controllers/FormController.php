@@ -27,4 +27,24 @@ class FormController extends Controller
         "formacoes" => Formacao::all(),
         ]);
     }
+
+    function store_form(Request $request){
+
+        $formando = $request->validate([
+            "nome" => "",
+            "email" => "",
+            "tlm" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+            "nome" => "",
+
+        ]);
+    }
 }
