@@ -35,7 +35,6 @@ return new class extends Migration
             //$table->unsignedTinyInteger('sit_prof_subsidio_id'); // also foreigh key, this is to allow to add optiom from admin dashboard
             $table->string('emprego',255);
             $table->unsignedTinyInteger('subsidio_id');
-            $table->smallInteger('tempo_em_meses_empregado')->nullable();
             $table->string('ultima_proff', 255)->nullable();
             $table->date('inicio_proff')->nullable();
             $table->date('fim_proff')->nullable();

@@ -12,6 +12,8 @@ class Formando extends Model
     
     use SoftDeletes;
 
+    use HasProfile;
+
     protected $fillable = [
         'nome',
         'email',
