@@ -30,6 +30,9 @@
                 estado.</p>
         </div>
     </div>
+    <br>
+    <hr>
+    <p class="text-xs text-gray-500">*(campos opcionaís)</p>
     <div class="flex flex-col md:flex-row">
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Última proffição</div>

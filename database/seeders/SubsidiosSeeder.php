@@ -16,11 +16,11 @@ class SubsidiosSeeder extends Seeder
     public function run()
     {
         $subsidios = [
-            "tipo" => "Nenhum",
-            "tipo" => "Subsídio de desemprego",
-            "tipo" => "Subsídio de desemprego parcial",
-            "tipo" => "Subsídio social de desemprego",
-            "tipo" => "Outro",
+            ["tipo" => "Nenhum"],
+            ["tipo" => "Subsídio de desemprego"],
+            ["tipo" => "Subsídio de desemprego parcial"],
+            ["tipo" => "Subsídio social de desemprego"],
+            ["tipo" => "Outro"],
         ];
 
         foreach($subsidios as $subsidio){

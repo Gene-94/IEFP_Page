@@ -40,13 +40,29 @@
         <div class="relative flex items-center text-gray-500" data-layout="progress-colors">
             <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
                 data-layout="progress-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-database ">
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 640 480" xml:space="preserve" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="currentColor">
+                    <defs>
+                    </defs>
+                    <g transform="matrix(3.13 0 0 3.5 321.62 237.75)">
+                    <g style="">
+                            <g transform="matrix(2.22 0 0 2.22 0 -25.96)">
+                    <path transform=" translate(-45, -30.31)" d="M 45 46.769 c -1.603 0 -3.207 -0.256 -4.766 -0.769 L 2.346 33.551 l 0 0 C 0.942 33.09 0 31.788 0 30.311 c 0 -1.477 0.943 -2.779 2.346 -3.239 l 37.888 -12.449 c 3.119 -1.024 6.414 -1.024 9.53 0 l 37.889 12.449 c 1.403 0.46 2.346 1.762 2.347 3.239 c 0 1.477 -0.942 2.779 -2.347 3.241 L 49.765 46 C 48.206 46.513 46.604 46.769 45 46.769 z M 5.299 30.311 L 41.483 42.2 c 2.3 0.755 4.731 0.756 7.033 0 l 36.185 -11.889 L 48.517 18.422 c -2.302 -0.756 -4.733 -0.755 -7.033 0 L 5.299 30.311 z" stroke-linecap="round"></path>
+                    </g>
+                            <g transform="matrix(2.22 0 0 2.22 0 23.94)">
+                    <path transform=" translate(-45, -52.79)" d="M 45 70.147 c -7.319 0 -14.637 -1.024 -21.905 -3.074 c -2.652 -0.749 -4.505 -3.177 -4.505 -5.905 V 37.44 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 23.728 c 0 0.946 0.654 1.791 1.591 2.056 c 13.814 3.897 27.822 3.896 41.638 0 c 0.937 -0.265 1.591 -1.11 1.591 -2.056 V 37.44 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 23.728 c 0 2.728 -1.853 5.156 -4.504 5.905 C 59.638 69.123 52.319 70.147 45 70.147 z" stroke-linecap="round"></path>
+                    </g>
+                            <g transform="matrix(2.22 0 0 2.22 85.44 3.41)">
+                    <path transform=" translate(-83.49, -43.54)" d="M 83.489 56.27 c -1.104 0 -2 -0.896 -2 -2 V 32.814 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 V 54.27 C 85.489 55.374 84.594 56.27 83.489 56.27 z" stroke-linecap="round"></path>
+                    </g>
+                            <g transform="matrix(2.22 0 0 2.22 85.44 34.44)">
+                    <path transform=" translate(-83.49, -57.52)" d="M 83.489 62.774 c -2.896 0 -5.253 -2.356 -5.253 -5.253 c 0 -2.896 2.356 -5.252 5.253 -5.252 c 2.896 0 5.252 2.356 5.252 5.252 C 88.741 60.418 86.385 62.774 83.489 62.774 z M 83.489 56.27 c -0.69 0 -1.253 0.562 -1.253 1.252 s 0.563 1.253 1.253 1.253 s 1.252 -0.563 1.252 -1.253 S 84.18 56.27 83.489 56.27 z" stroke-linecap="round"></path>
+                    </g>
+                            <g transform="matrix(2.22 0 0 2.22 85.44 49.85)">
+                    <path transform=" translate(-83.49, -64.47)" d="M 83.489 70.161 c -1.104 0 -2 -0.896 -2 -2 v -7.387 c 0 -1.104 0.896 -2 2 -2 s 2 0.896 2 2 v 7.387 C 85.489 69.266 84.594 70.161 83.489 70.161 z" stroke-linecap="round"></path>
+                    </g>
+                    </g>
+                    </g>
+                    </svg>
             </div>
             <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
                 data-layout="progress-text">
@@ -57,33 +73,35 @@
         <div class="relative flex items-center text-gray-500" data-layout="progress-colors">
             <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
                 data-layout="progress-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                    class="feather feather-database ">
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 640 480" xml:space="preserve" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-database ">
+                    <g transform="matrix(1.43 0 0 1.24 322 240.04)" id="Combined-Shape">
+                    <path transform=" translate(-213.33, -181.33)" d="M 277.333333 1.42108547e-14 L 298.666667 21.3333333 L 298.666 64 L 426.666667 64 L 426.666667 362.666667 L 3.55271368e-14 362.666667 L 3.55271368e-14 64 L 128 64 L 128 21.3333333 L 149.333333 1.42108547e-14 L 277.333333 1.42108547e-14 Z M 42.6664912 220.935181 L 42.6666667 320 L 384 320 L 384.000468 220.935097 C 341.375319 233.130501 298.701692 240.759085 256.000479 243.809455 L 256 277.333333 L 170.666667 277.333333 L 170.666323 243.809465 C 127.965163 240.759108 85.2915887 233.130549 42.6664912 220.935181 Z M 384 106.666667 L 42.6666667 106.666667 L 42.6668606 176.433085 C 99.6386775 193.933257 156.507113 202.666667 213.333333 202.666667 C 270.159803 202.666667 327.028489 193.933181 384.000558 176.432854 L 384 106.666667 Z M 256 42.6666667 L 170.666667 42.6666667 L 170.666667 64 L 256 64 L 256 42.6666667 Z" stroke-linecap="round"></path>
+                    </g>
+                    </svg>
             </div>
             <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase progress-icon"
                 data-layout="progress-text">
-                Sit. Profissional</div>
+                Prof.</div>
         </div>
         <div class="flex-auto transition duration-500 ease-in-out border-t-2 border-gray-300"
             data-layout="progress-line"></div>
         <div class="relative flex items-center text-gray-500" data-layout="progress-colors">
             <div class="w-12 h-12 py-3 transition duration-500 ease-in-out border-2 border-gray-300 rounded-full progress-icon"
                 data-layout="progress-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="none"
-                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="feather feather-database ">
-                    <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
-                    <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path>
-                    <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" viewBox="0 0 640 480" xml:space="preserve" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="currentColor">
+                    <g transform="matrix(0.75 0 0 0.75 421.49 209.94)">
+                    <path transform=" translate(-256, -256)" d="M 473.818 0.003 c 0 0 -18.578 28.297 -139.938 70.172 c -123.719 42.688 -199.875 216.406 -199.875 216.406 c -18.344 35.578 -90.813 183.453 -90.813 183.453 c -19.953 38.172 16.625 60.734 38.063 21.313 c 41.156 -75.703 67.688 -144.875 130.25 -146.844 c 91.219 -2.875 153.609 -84.109 133.984 -80.359 c -25.844 11.484 -82.781 0.875 -49.234 -4.391 c 80.531 -6.594 130.125 -68.297 113.969 -72.5 c -28.563 11.219 -55.172 0.578 -60.391 -2.656 C 491.959 166.987 473.818 0.003 473.818 0.003 z" stroke-linecap="round"></path>
+                    </g>
+                    <g transform="matrix(18.31 0 0 17.22 164.39 367.91)">
+                    <path transform=" translate(-12, -11.91)" d="M 9 12 L 10.6828 13.6828 V 13.6828 C 10.858 13.858 11.142 13.858 11.3172 13.6828 V 13.6828 L 15 10" stroke-linecap="round"></path>
+                    </g>
+                    </svg>
             </div>
             <div class="invisible sm:visible absolute top-0 w-32 mt-16 -ml-10 text-xs font-medium text-center text-gray-500 uppercase"
                 data-layout="progress-text">
-                Formação</div>
+                Escolher
+                <br>
+                Formação
+                </div>
         </div>
     </div>

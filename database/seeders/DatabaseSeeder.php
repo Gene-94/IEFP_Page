@@ -22,6 +22,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         
         $this->call(RequisitosTableSeeder::class);
+        $this->call(SubsidiosSeeder::class);
         $this->call(TiposDocumentoTableSeeder::class);
         $this->call(EstadoCivilTableSeeder::class);
         $this->call(PaisesTableSeeder::class);

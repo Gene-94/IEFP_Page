@@ -14,6 +14,7 @@ use App\Models\Habilitacoes;
 use App\Models\NrTrabalhadores_Opcao;
 use App\Models\Formacao;
 use App\Models\Formando;
+use App\Models\Subsidio;
 
 class FormController extends Controller
 {
@@ -28,6 +29,7 @@ class FormController extends Controller
         "habilitacoes" => Habilitacoes::all(),
         "nrTrabalhadores" => NrTrabalhadores_Opcao::all(),
         "formacoes" => Formacao::all(),
+        "subsidios" => Subsidio::all(),
         ]);
     }
 
