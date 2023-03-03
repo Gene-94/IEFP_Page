@@ -23,10 +23,12 @@ function nextSection() {
   }
   
 
-    if(navCount > 0) {
-        navCount -= 1;
-    }
-    showSection(cardIndex += 1);
+  if(navCount > 0) {
+      navCount -= 1;
+  }
+
+
+  showSection(cardIndex += 1);
 }
 
 function prevSection() {
@@ -233,6 +235,54 @@ function validateField(data_name) {
   
 }
 
+function validateOnEmployed(data_name){
+  const situacao = document.querySelector('[data-layout="SitProf-selector"]');
+  let tipo = situacao.value; 
+
+  if(tipo==1){
+    validateField(data_name);
+  }
+}
+
+function validateRadial(){
+  const nameInputs = document.getElementsByName("empregado");
+  const situacao = document.querySelector('[data-layout="SitProf-selector"]');
+  let tipo = situacao.value; 
+
+  if(tipo==1){
+    var error_msg1 = document.querySelector('[data-invalid="tipoEmpregado"]');
+    const empregado = document.querySelectorAll('[data-formulario="tipoEmpregado"]');
+    if(empregado[0].checked || empregado[1].checked){
+      empregado[0].classList.remove('outline', 'outline-red-600');
+      empregado[1].classList.remove('outline', 'outline-red-600');
+      error_msg1.classList.add('hidden');
+      error_msg1.classList.remove('block');
+    }
+    else{
+      empregado[0].classList.add('outline', 'outline-red-600');
+      empregado[1].classList.add('outline', 'outline-red-600');
+      error_msg1.classList.remove('hidden');
+      error_msg1.classList.add('block');
+    }
+  }
+  else if(tipo==2){
+    var error_msg2 = document.querySelector('[data-invalid="tempoDesempregado"]');
+    const desempregado = document.querySelectorAll('[data-formulario="tempoDesempregado"]');
+    if(desempregado[0].checked || desempregado[1].checked){
+      desempregado[0].classList.remove('outline', 'outline-red-600');
+      desempregado[1].classList.remove('outline', 'outline-red-600');
+      error_msg2.classList.add('hidden');
+      error_msg2.classList.remove('block');
+    }
+    else{
+      desempregado[0].classList.add('outline', 'outline-red-600');
+      desempregado[1].classList.add('outline', 'outline-red-600');
+      error_msg2.classList.remove('hidden');
+      error_msg2.classList.add('block');
+    }
+  }
+}
+
 function limitSize(identifier, n = 0) {
   input = document.querySelector(`[data-formulario="${identifier}"]`);
   if(n==-1){
@@ -306,14 +356,19 @@ function sitProff_layoutListener() {
   const layout = document.querySelectorAll('[data-layout="SitProf"]');
   let tipo = situacao.value; 
   for(let i = 0; i<layout.length; i++){
+    const invalidInput = layout[i].querySelectorAll('[data-invalid]');
+    for(let j=0; j<invalidInput.length; j++){
+      invalidInput[j].classList.add("hidden");
+      invalidInput[j].classList.remove("block");
+    }
     layout[i].classList.add('hidden');
     var inputs = []
       .concat(Array.from(layout[i].getElementsByTagName('input')))
       .concat(Array.from(layout[i].getElementsByTagName('select')))
       .concat(Array.from(layout[i].getElementsByTagName('textarea')));
     for(var j = 0; j<inputs.length; j++) {
-      inputs[i].value = "";
-      inputs[i].checked = false;
+      inputs[j].value = "";
+      inputs[j].checked = false;
     }
   }
     if(tipo == 1){

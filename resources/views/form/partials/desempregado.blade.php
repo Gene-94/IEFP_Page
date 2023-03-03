@@ -4,14 +4,15 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Tempo em desemprego </div>
             <div class="grid grid-cols-2 gap-3">
                 <div class="col-span-1">
-                    <input type="radio" name="emprego" id="menos1Ano" value="Desempregado, ha menos de um ano" selected>
+                    <input type="radio" name="emprego" id="menos1Ano" value="Desempregado, ha menos de um ano" data-formulario="tempoDesempregado" onblur="validateRadial()" onclick="validateRadial()">
                     <label for="menos1Ano">Inferior a 1 ano</label>
                 </div>
                 <div class="col-span-1">
-                    <input type="radio" name="emprego" id="mais1Ano" value="Desempregado, ha mais de um ano">
+                    <input type="radio" name="emprego" id="mais1Ano" value="Desempregado, ha mais de um ano" data-formulario="tempoDesempregado" onclick="validateRadial()">
                     <label for="mais1Ano">Superior a 1 ano</label>
                 </div>
             </div>
+            <p class="hidden text-sm text-red-600" data-invalid="tempoDesempregado">*Selecione há quanto tempo esta desempregado</p>
         </div>
     </div>
     <div class="flex flex-col md:flex-row">

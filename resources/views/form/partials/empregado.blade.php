@@ -4,15 +4,15 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Regime </div>
             <div class="grid grid-cols-2 gap-3">
                 <div class="col-span-1">
-                    <input type="radio" name="emprego" id="contaPropria" value="Empregado, por conta própria" required>
+                    <input type="radio" name="emprego" id="contaPropria" value="Empregado, por conta própria" data-formulario="tipoEmpregado" onblur="validateRadial()" onclick="validateRadial()">
                     <label for="contaPropria">Por conta própria</label>
                 </div>
                 <div class="col-span-1">
-                    <input type="radio" name="emprego" id="contaOutrem" value="Empregado, por conta de outrem"
-                        required selected>
+                    <input type="radio" name="emprego" id="contaOutrem" value="Empregado, por conta de outrem" data-formulario="tipoEmpregado" onclick="validateRadial()">
                     <label for="contaOutrem">Por conta de outrem</label>
                 </div>
             </div>
+            <p class="hidden text-sm text-red-600" data-invalid="tipoEmpregado">*Selecione o tipo de regime em que se enquadra</p>
         </div>
     </div>
     <div class="flex flex-col md:flex-row">

@@ -60,14 +60,14 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Codigo Postal</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
                 <input placeholder="8500" name="postal1" id="postal1" data-target="postal1" data-formulario="postal1"
-                    pattern="[0-9]{4}" maxlength="4" onblur="validateField('postal1')" required required
+                    pattern="[0-9]{4}" maxlength="4" onblur="validateField('postal1')" required
                     class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none mr-1 pl-5">
                 <strong>-</strong>
                 <input placeholder="000" name="postal2" id="postal2" data-target="postal2" data-formulario="postal2"
                     pattern="[0-9]{3}" required maxlength="3" onblur="validateField('postal2')" required
                     class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none ml-1 pl-3">
             </div>
-            <p class="hidden text-sm text-red-600" data-invalid="postal1"></p>
+            <p class="hidden text-sm text-red-600" data-invalid="postal2"></p>
             <p class="hidden text-sm text-red-600" data-invalid="postal1">*Indique o seu codigo postal</p>
         </div>
 
