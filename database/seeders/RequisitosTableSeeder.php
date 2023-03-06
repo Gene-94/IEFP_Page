@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\Requisito;
 
 class RequisitosTableSeeder extends Seeder
 {
@@ -14,7 +15,18 @@ class RequisitosTableSeeder extends Seeder
      */
     public function run()
     {
-        
+        $requisitos = [
+            ["nome" => "Nenhum"],
+            ["nome" => "Computador"],
+            ["nome" => "Ligação a internet"],
+            ["nome" => "Camera Web"],
+            ["nome" => "Microfone"],
+            ["nome" => "Saida audio"],
+        ];
+
+        foreach($requisitos as $requisito){
+            Requisito::create($requisito);
+        }
 
 
         

@@ -33,6 +33,18 @@ class FormController extends Controller
         ]);
     }
 
+    function getFormacao($formacao_id){
+        $formacao = Formacao::find($formacao_id);
+        return response()->json([
+        "regime_horario" => $formacao->regimeHorario->nome_regime,
+        "regime_presenca" => $formacao->regimePresenca->nome_regime,
+        "data_inicio" => $formacao->data_inicio_prevista,
+        "duracao" => $formacao->duracao_horas,
+        "descricao" => $formacao->descricao,
+        "requisitos" => $formacao->requisitos->map(function($requisito){return $requisito->nome;}),
+        ]);
+    }
+
     function store_form(Request $request){
 
         $validateFormando = $request->validate([

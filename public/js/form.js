@@ -104,7 +104,6 @@ let step_id_text = document.getElementById("step_id_text");
 
   step_id.classList.add('bg-teal-600 border-teal-600');
   */
-  //let dots = document.getElementsByClassName("dot"); // replace dor for each progress-item
   if (n >= slides.length) {cardIndex = slides.length-1;}
   if (n < 0) {cardIndex = 0}
   for (let i = 0; i < slides.length; i++) {
@@ -121,11 +120,6 @@ let step_id_text = document.getElementById("step_id_text");
     btns_submit.style.display = "";
   }
 
-  /*
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  */
  slides[cardIndex].style.display = "block";
 
   if(cardIndex >= 1 && cardIndex < slides.length-1) {
@@ -386,6 +380,55 @@ function sitProff_layoutListener() {
     }
     */
 }
+
+function FomacaoDetails(id_formacao) {
+  const formacaoInfo = document.querySelector('[data-layout="formacaoInfo"]');
+  const DetalhesFormacao = document.querySelector('[data-target="DetalhesFormacao"]');
+  const RegimeHorario = document.querySelector('[data-target="RegimeHorario"]');
+  const RegimePresensa = document.querySelector('[data-target="RegimePresenca"]');
+  const ListaRequisitos = document.querySelector('[data-target="ListaRequisitos"]');
+
+  DetalhesFormacao.textContent = "";
+  RegimeHorario.textContent = "";
+  RegimePresensa.textContent = "";
+  ListaRequisitos.textContent = "";
+
+
+
+  
+  // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/readystatechange_event
+
+  fetch('form/formacao/'+id_formacao)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(formacao => {
+    DetalhesFormacao.innerText = formacao.descricao;
+    RegimeHorario.innerText = formacao.regime_presenca;
+    RegimePresensa.innerText = formacao.regime_horario;
+
+    ListaRequisitos.innerHTML = "";
+    
+		formacao.requisitos.forEach(requisito => {
+        var p = document.createElement("p");
+        p.classList.add("text-sm","text-gray-600", "px-2", "font-bold");
+        p.innerText = "· "+requisito;
+        ListaRequisitos.appendChild(p);
+      });
+
+    formacaoInfo.classList.remove("hidden");
+  
+  })
+  .catch(error => console.error('Error:', error));
+  
+  
+
+}
+
+
 
 
 

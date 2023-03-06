@@ -13,14 +13,14 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('requisitos_formacao', function (Blueprint $table) {
+        Schema::create('incricao_requisito', function (Blueprint $table) {
             $table->unsignedTinyInteger('requisito_id');
-            $table->unsignedBigInteger('formacao_id');
+            $table->unsignedBigInteger('inscricao_id');
             $table->timestamps();
 
             $table->foreign('requisito_id')->references('id')->on('requisitos');
-            $table->foreign('formacao_id')->references('id')->on('formacoes');
-            $table->primary(array('requisito_id', 'formacao_id'));
+            $table->foreign('inscricao_id')->references('id')->on('inscricoes');
+            $table->primary(array('requisito_id', 'inscricao_id'));
         });
     }
 
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('requisitos_formacao');
+        Schema::dropIfExists('incricao_requisito');
     }
 };

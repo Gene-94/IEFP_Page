@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use App\Models\RegimeHorario;
 
 class RegimesHorarioTableSeeder extends Seeder
 {
@@ -15,7 +16,16 @@ class RegimesHorarioTableSeeder extends Seeder
     public function run()
     {
         
+        $regimes = [
+            ["nome_regime" => "Manhã"],
+            ["nome_regime" => "Tarde"],
+            ["nome_regime" => "Laboral"],
+            ["nome_regime" => "Pós-laboral"],
+        ];
 
+        foreach($regimes as $regime){
+            RegimeHorario::create($regime);
+        }
         
         
     }
