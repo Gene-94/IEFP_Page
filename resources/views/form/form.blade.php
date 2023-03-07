@@ -30,7 +30,17 @@
                 @include('form.partials.formacao')
                 @include('form.partials.final')
 
-                
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li class="text-bold text-red-600">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
+
+
 
                 <div class="flex flex-col-reverse sm:flex-row p-2 mt-4">
                     @include('form.partials.previous_btn')
@@ -44,7 +54,6 @@
 <footer>
     <script>
         initialShow();
-        
     </script>
 </footer>
 

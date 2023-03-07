@@ -15,6 +15,7 @@ use App\Models\NrTrabalhadores_Opcao;
 use App\Models\Formacao;
 use App\Models\Formando;
 use App\Models\Subsidio;
+use App\Models\User;
 
 class FormController extends Controller
 {
@@ -67,7 +68,7 @@ class FormController extends Controller
             'ano_conclusao' => 'nullable|integer|min:1950|max:2050', 
             'estabelecimento_enino' => 'nullable|string|max:255',
             'certificado' => 'file|mimes:pdf,jpg,jpeg,png',
-            'emprego' => 'required|string|max:255',
+            //'emprego' => 'string|max:255',
             'subsidio_id' => 'integer|exists:subsidios,id',
             'ultima_proff' => 'nullable|string|max:255',
             'inicio_proff' => 'nullable|date|before:today',

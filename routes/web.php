@@ -39,6 +39,7 @@ Route::post('/admin/opcoes/apagar', [AdminController::class, 'delete_option']);
 
 
 
+
 /*
 Route::get('/tailwind_form', function () {
     return view('tailwind_form');
