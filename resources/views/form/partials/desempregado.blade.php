@@ -38,7 +38,7 @@
         <div class="flex-1 w-full mx-2 ">
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Última proffição</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded">
-                <input class="block w-full p-1 px-2 text-gray-800 outline-none appearance-none form-control"
+                <input name="ultima_proff" class="block w-full p-1 px-2 text-gray-800 outline-none appearance-none form-control"
                     placeholder=" carpinteiro ">
             </div>
         </div>

@@ -30,6 +30,8 @@
                 @include('form.partials.formacao')
                 @include('form.partials.final')
 
+                
+
                 <div class="flex flex-col-reverse sm:flex-row p-2 mt-4">
                     @include('form.partials.previous_btn')
                     @include('form.partials.next_btn')
@@ -42,6 +44,7 @@
 <footer>
     <script>
         initialShow();
+        
     </script>
 </footer>
 
