@@ -15,6 +15,7 @@ use App\Models\NrTrabalhadores_Opcao;
 use App\Models\Formacao;
 use App\Models\Formando;
 use App\Models\Subsidio;
+use App\Models\User;
 
 class FormController extends Controller
 {

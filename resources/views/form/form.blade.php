@@ -34,12 +34,21 @@
                     <div class="alert alert-danger">
                         <ul>
                             @foreach ($errors->all() as $error)
+<<<<<<< HEAD
                                 <li class="text-red-600 text-bold">{{ $error }}</li>
+=======
+                                <li class="text-bold text-red-600">{{ $error }}</li>
+>>>>>>> 37ff0505e68bca6c26a36774e93feb5d81c857a9
                             @endforeach
                         </ul>
                     </div>
                 @endif
+<<<<<<< HEAD
                 
+=======
+
+
+>>>>>>> 37ff0505e68bca6c26a36774e93feb5d81c857a9
 
                 <div class="flex flex-col-reverse sm:flex-row p-2 mt-4">
                     @include('form.partials.previous_btn')
@@ -53,7 +62,6 @@
 <footer>
     <script>
         initialShow();
-        
     </script>
 </footer>
 
