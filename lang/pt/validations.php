@@ -181,7 +181,7 @@ return [
     "user_already_on_team" => "Esse usuário já está na equipe.",
     "user_doesnt_belong_to_team" => "O usuário não pertence à equipe fornecida.",
     "user_invited_to_join_team" => ":UserName convidou você para se juntar a sua equipe!",
-    "uuid" => ":Attribute tem de ser um UUID válido.",
+    "uuid" => ":attribute tem de ser um UUID válido.",
     "vat_id" => "Este número de identificação de IVA é inválido.",
     "view_all_teams" => "Ver todas as equipes",
     "we_found_invitation_to_team" => "Encontramos seu convite para o time :teamName!",
@@ -201,12 +201,6 @@ return [
     |
     */
 
-    'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
-        ],
-    ],
-
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Attributes
@@ -217,7 +211,5 @@ return [
     | of "email". This simply helps us make our message more expressive.
     |
     */
-
-    'attributes' => [],
 
 ];

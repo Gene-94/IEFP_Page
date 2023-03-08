@@ -4,7 +4,7 @@
     <div class="flex-1 w-full mx-2 ">
         <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
             <input name="nome" placeholder="nome completo" required pattern="^[a-zA-Z]+((\s|\.)[a-zA-Z]+)+"
-                maxlength="250" data-formulario="nome" onblur="validateField('nome')"
+                maxlength="250" data-formulario="nome" onblur="validateField('nome')" value="{{ old('nome') }}"
                 class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
         </div>
         <p class="hidden text-sm text-red-600" data-invalid="nome">*Insira o nome completo separado por espaços e com um
@@ -16,7 +16,7 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Email</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
                 <input name="email" placeholder="emailpessoal@email.com" required pattern="^[\w\.]+@\w+\.[a-zA-Z]+"
-                    maxlength="250" data-formulario="email" onblur="validateField('email')"
+                    maxlength="250" data-formulario="email" onblur="validateField('email')" value="{{ old('email') }}"v
                     class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="email">*Insira um email valido</p>
@@ -27,7 +27,7 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Telemovel</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded ">
                 <input name="telemovel" placeholder="Número de Telemóvel" data-formulario="tel"
-                    onblur="validateField('tel')" required
+                    onblur="validateField('tel')" required value="{{ old('telemovel') }}"
                     pattern="^((\+|0{2})\d{1,3}[-\s]?)?(\d{9,11}|(\d{3}\s\d{3}\s\d{3}))$" maxlength="16"
                     class="w-full p-1 px-2 text-gray-800 rounded appearance-none">
             </div>
@@ -38,7 +38,7 @@
             <div class="h-6 mt-3 text-xs font-bold leading-8 text-gray-600 uppercase"> Data Nascimento</div>
             <div class="flex p-1 my-2 bg-white border border-gray-200 rounded">
                 <input name="data_nascimento" type="date" data-formulario="dataNasc"
-                    onblur="validateField('dataNasc')" required
+                    onblur="validateField('dataNasc')" required value="{{ old('data_nascimento') }}"
                     class="w-full p-1 px-2 text-gray-800 appearance-none rounded border-none">
             </div>
             <p class="hidden text-sm text-red-600" data-invalid="dataNasc">*Insira uma data de nascimento</p>

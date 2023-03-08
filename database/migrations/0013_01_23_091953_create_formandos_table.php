@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('telemovel', 20);
             $table->date('data_nascimento');
             $table->unsignedTinyInteger('tipo_documento_id');
-            $table->unsignedTinyInteger('estado_civil_id'); // foreign key de TiposDocumento, modelo deve devolver logo o nome
+            $table->unsignedTinyInteger('estado_civil_id')->nullable(); // foreign key de TiposDocumento, modelo deve devolver logo o nome
             $table->string('nr_documento', 50);
             $table->date('validade_documento');
             $table->string('niss', 15);

@@ -143,7 +143,7 @@ let step_id_text = document.getElementById("step_id_text");
       
   }
     
-  if (cardIndex >= 2) {
+  if (cardIndex >= 2 && cardIndex < 6) {
     //completed 
     icons[cardIndex-2].classList.remove("bg-teal-600");  
     colors[cardIndex-2].classList.add("text-teal-600");  
@@ -345,6 +345,9 @@ function sitProff_layoutListener() {
 }
 */
 
+
+/*
+//original
 function sitProff_layoutListener() {
   const situacao = document.querySelector('[data-layout="SitProf-selector"]');
   const layout = document.querySelectorAll('[data-layout="SitProf"]');
@@ -373,12 +376,40 @@ function sitProff_layoutListener() {
       //desempregado
       layout[1].classList.remove('hidden');
     }
-    /*
-    else if(tipo == 3) {
-      //estudante
-      layout[2].classList.remove('hidden');
+}
+*/
+
+function sitProff_layoutListener() {
+  const situacao = document.querySelector('[data-layout="SitProf-selector"]');
+  const layout = document.querySelectorAll('[data-layout="SitProf"]');
+  let tipo = situacao.value; 
+  function wipe(i){
+    const invalidInput = layout[i].querySelectorAll('[data-invalid]');
+    for(let j=0; j<invalidInput.length; j++){
+      invalidInput[j].classList.add("hidden");
+      invalidInput[j].classList.remove("block");
     }
-    */
+    var inputs = []
+      .concat(Array.from(layout[i].getElementsByTagName('input')))
+      .concat(Array.from(layout[i].getElementsByTagName('select')))
+      .concat(Array.from(layout[i].getElementsByTagName('textarea')));
+    for(var j = 0; j<inputs.length; j++) {
+      inputs[j].value = "";
+      inputs[j].checked = false;
+    }
+  }
+    if(tipo == 1){
+      //empregado
+      layout[0].classList.remove('hidden');
+      layout[1].classList.add('hidden');
+      wipe(1);
+    }
+    else if(tipo == 2) {
+      //desempregado
+      layout[1].classList.remove('hidden');
+      layout[0].classList.add('hidden');
+      wipe(0);
+    }
 }
 
 function FomacaoDetails(id_formacao) {

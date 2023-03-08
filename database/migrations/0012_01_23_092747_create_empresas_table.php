@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('empresas', function (Blueprint $table) {
             $table->id();
-            $table->string('nome', 255);
-            $table->string('nif', 15);
-            $table->string('morada', 255)->nullable();
-            $table->string('cod_postal', 10)->nullable();
+            $table->string('nomeEmpresa', 255);
+            $table->string('nifEmpresa', 15);
+            $table->string('moradaEmpresa', 255)->nullable();
+            $table->string('postalEmpresa', 10)->nullable();
             $table->unsignedTinyInteger('nr_trabalhadores_id'); // foreign key para tabela com opções customisadas pre-inseridas para campo -> (dropdown)
             $table->timestamps();
 

@@ -18,10 +18,10 @@ class EmpresasTableSeeder extends Seeder
         
         $empresas = [
             [
-                "nome" => "Produção Multipessoal Unipessoal LDA.",
-                "nif" => "123456789",
-                "morada" => "Zona Industrial do alto da Ribeira lote 3",
-                "cod_postal" => "5500-321",
+                "nomeEmpresa" => "Produção Multipessoal Unipessoal LDA.",
+                "nifEmpresa" => "123456789",
+                "moradaEmpresa" => "Zona Industrial do alto da Ribeira lote 3",
+                "postalEmpresa" => "5500-321",
                 "nr_trabalhadores_id" => 3,
             ],
         ];

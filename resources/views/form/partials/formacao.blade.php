@@ -4,8 +4,8 @@
         <div class="flex p-1 my-2 bg-white border border-gray-200 rounded">
             <select name="formacao" data-formulario="formacao" onblur="validateField('formacao')" required
             class="w-full p-1 px-2 text-gray-800 outline-none appearance-none border-none rounded" 
-            data-dynamic="formacao" onchange="FomacaoDetails(this.value)" >
-                <option value="" selected disabled>escolha a formação pretendida</option>
+            data-dynamic="formacao" onchange="FomacaoDetails(this.value)"  >
+                <option value="" {!! old('formacao')==null?"selected":"" !!} disabled>escolha a formação pretendida</option>
                 @foreach($formacoes as $formacao)
                     <option value="{{$formacao->id}}">{{$formacao->nome}}</option>
                 @endforeach

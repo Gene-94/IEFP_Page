@@ -47,7 +47,7 @@ class FormController extends Controller
 
     function store_form(Request $request){
 
-        $validateFormando = $request->validate([
+        $formando_validation = $request->validate([
             "nome" => "required|string|max:255",
             "email" => "required|email|unique:formandos,email|max:255",
             "telemovel" => "required|string|max:20",
@@ -66,26 +66,39 @@ class FormController extends Controller
             'area_curso' => 'nullable|string|max:255',
             'ano_conclusao' => 'nullable|integer|min:1950|max:2050', 
             'estabelecimento_enino' => 'nullable|string|max:255',
-            'certificado' => 'file|mimes:pdf,jpg,jpeg,png',
             'emprego' => 'required|string|max:255',
             'subsidio_id' => 'integer|exists:subsidios,id',
             'ultima_proff' => 'nullable|string|max:255',
             'inicio_proff' => 'nullable|date|before:today',
-            'fim_proff' => 'nullable|date|after:inicio_proff',
+            'fim_proff' => 'nullable|date|after:inicio_proff|before:today',
         ]);
-
-        $empresa = $request->validate([
-            'nome' => 'sometimes|required_with:nif,morada,cod_postal,nr_trabalhadores_id|string|max:255',
-            'nif' => 'sometimes|required_with:nome,morada,cod_postal,nr_trabalhadores_id|digits:9',
-            'morada' => 'nullable|string|max:255',
-            'cod_postal' => 'nullable|string|max:10',
-            'nr_trabalhadores_id' => 'sometimes|required_with:nome,nif,morada,cod_postal|integer|exists:nr_trabalhadores__opcoes,id',
+        
+        $certificado = $request->validate([
+            'certificado' => 'file|mimes:pdf,jpg,jpeg,png',
         ]);
-
+        
         $codPostal = $request->validate([
             'postal1' => 'required|digits:4',
             'postal2' => 'required|digits:3',
         ]);
+
+        $formando_validation += ["cod_postal" => ($codPostal['postal1']."-".$codPostal['postal2'])];
+
+        $empresa = $request->validate([
+            'nomeEmpresa' => 'sometimes|required_with:nif,morada,cod_postal,nr_trabalhadores_id|string|max:255',
+            'nifEmpresa' => 'sometimes|required_with:nome,morada,cod_postal,nr_trabalhadores_id|digits:9',
+            'moradaEmpresa' => 'nullable|string|max:255',
+            'nrTrabalhadores' => 'sometimes|required_with:nome,nif,morada,cod_postal|integer|exists:nr_trabalhadores__opcoes,id',
+        ]);
+        
+        $codPostal_empresa = $request->validate([
+            'postal1_Empresa' => 'nullable|string|max:10',
+            'postal2_Empresa' => 'nullable|string|max:10',
+        ]);
+
+        if($codPostal_empresa && $empresa && $empresa['nifEmpresa'] ){
+            $empresa += ["postalEmpresa" => ($codPostal_empresa['postal1_Empresa']."-".$codPostal_empresa['postal2_Empresa'])];
+        }
 
         $validateUser = $request->validate([
             'email' => "nullable|required_with:password|email|unique:users,email|max:255",
@@ -94,17 +107,22 @@ class FormController extends Controller
             //name = nome 
         ]);
 
-
-
-        $codPostal = $codPostal['postal1']."-".$codPostal['postal2'];
-
         $path = $request->file('certificado')->store('certificados');
-
-        $validateFormando['certificado'] = $path;
-        $validateFormando['cod_postal'] = $codPostal;
-
-        $formando = new Formando($validateFormando);
+        $formando_validation += ["certificado" => $path];
+        $formando = new Formando($formando_validation);
         $formando->save();
+        if($empresa['nifEmpresa']){
+            $empresaExistente = Empresa::where('nifEmpresa',$empresa['nifEmpresa'])->firstOr(function(){
+                $formando->empresa()-save(new Empresa($empresa));
+            });
+            $formando->empresa()-save(
+                Empresa::where('nifEmpresa',$empresa['nifEmpresa'])->firstOr( function()
+                    {
+                        return new Empresa($empresa);
+                    }
+                )
+            );
+        }
 
         if($validateUser['password']){
             $user = User::create([
@@ -117,6 +135,8 @@ class FormController extends Controller
             $user->save();
             $user->sendEmailVerificationNotification();
         }
+
+        
 
         return dd($formando);
     }

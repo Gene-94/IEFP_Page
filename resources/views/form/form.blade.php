@@ -30,6 +30,15 @@
                 @include('form.partials.formacao')
                 @include('form.partials.final')
 
+                @if ($errors->any())
+                    <div class="alert alert-danger">
+                        <ul>
+                            @foreach ($errors->all() as $error)
+                                <li class="text-red-600 text-bold">{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
                 
 
                 <div class="flex flex-col-reverse sm:flex-row p-2 mt-4">
