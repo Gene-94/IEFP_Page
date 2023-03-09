@@ -23,6 +23,9 @@ Route::get('form/formacao/{formacao_id}', [FormController::class , 'getFormacao'
 Route::get('/formulario', function () {
     return redirect('/form');
 });
+Route::get('/formando', function () {
+    return view('dashboard.formando');
+});
 
 
 /*
