@@ -13,15 +13,13 @@
                         class="toggle-line"></span></span></button>
 
         </div><a class="navbar-brand" href="../index.html">
-            <div class="d-flex align-items-center py-3"><img class="me-2"
-                    src="../assets/img/icons/spot-illustrations/falcon.png" alt="" width="40" /><span
-                    class="font-sans-serif">falcon</span>
+            <div class="py-3 d-flex align-items-center"><span class="font-sans-serif">IEFP</span>
             </div>
         </a>
     </div>
     <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
         <div class="navbar-vertical-content scrollbar">
-            <ul class="navbar-nav flex-column mb-3" id="navbarVerticalNav">
+            <ul class="mb-3 navbar-nav flex-column" id="navbarVerticalNav">
                 <li class="nav-item">
                     <!-- parent pages--><a class="nav-link dropdown-indicator" href="#dashboard" role="button"
                         data-bs-toggle="collapse" aria-expanded="false" aria-controls="dashboard">
@@ -87,7 +85,7 @@
                 </li>
                 <li class="nav-item">
                     <!-- label-->
-                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="mt-3 mb-2 row navbar-vertical-label-wrapper">
                         <div class="col-auto navbar-vertical-label">App
                         </div>
                         <div class="col ps-0">
@@ -435,7 +433,7 @@
                 </li>
                 <li class="nav-item">
                     <!-- label-->
-                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="mt-3 mb-2 row navbar-vertical-label-wrapper">
                         <div class="col-auto navbar-vertical-label">Pages
                         </div>
                         <div class="col ps-0">
@@ -833,7 +831,7 @@
                 </li>
                 <li class="nav-item">
                     <!-- label-->
-                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="mt-3 mb-2 row navbar-vertical-label-wrapper">
                         <div class="col-auto navbar-vertical-label">Modules
                         </div>
                         <div class="col ps-0">
@@ -1866,7 +1864,7 @@
                 </li>
                 <li class="nav-item">
                     <!-- label-->
-                    <div class="row navbar-vertical-label-wrapper mt-3 mb-2">
+                    <div class="mt-3 mb-2 row navbar-vertical-label-wrapper">
                         <div class="col-auto navbar-vertical-label">Documentation
                         </div>
                         <div class="col ps-0">
@@ -1949,17 +1947,17 @@
                     </a>
                 </li>
             </ul>
-            <div class="settings mb-3">
-                <div class="card shadow-none">
-                    <div class="card-body alert mb-0" role="alert">
+            <div class="mb-3 settings">
+                <div class="shadow-none card">
+                    <div class="mb-0 card-body alert" role="alert">
                         <div class="btn-close-falcon-container">
-                            <button class="btn btn-link btn-close-falcon p-0" aria-label="Close"
+                            <button class="p-0 btn btn-link btn-close-falcon" aria-label="Close"
                                 data-bs-dismiss="alert"></button>
                         </div>
                         <div class="text-center"><img
                                 src="../assets/img/icons/spot-illustrations/navbar-vertical.png" alt=""
                                 width="80" />
-                            <p class="fs--2 mt-2">Loving what you see? <br />Get your copy of <a
+                            <p class="mt-2 fs--2">Loving what you see? <br />Get your copy of <a
                                     href="#!">Falcon</a></p>
                             <div class="d-grid"><a class="btn btn-sm btn-purchase"
                                     href="https://themes.getbootstrap.com/product/falcon-admin-dashboard-webapp-template/"

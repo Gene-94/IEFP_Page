@@ -1,11 +1,7 @@
-@php($page = "Area de Trabalho")
+@php($page = 'Area de Trabalho')
 
 
-@extends('dashboard.layouts.dashboard_base')
+@extends('dashboard.layouts.template_layout')
 @section('content')
-    
-@include('dashboard.partials.calendar')
-@include('dashboard.partials.personList' /*, ['tabela' => $opcoes[0][$i], 'nome' => $opcoes[1][$i]]*/)
-
-
+    @include('dashboard.partials.calendar')
 @endsection

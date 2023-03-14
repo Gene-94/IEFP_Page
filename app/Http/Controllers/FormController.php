@@ -2,20 +2,22 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
-
-use App\Models\TipoDocumento;
 use App\Models\Pais;
-use App\Models\EstadoCivil;
-use App\Models\Distrito;
+use App\Models\User;
+
+use App\Models\Empresa;
 use App\Models\Concelho;
-use App\Models\Habilitacoes;
-use App\Models\NrTrabalhadores_Opcao;
+use App\Models\Distrito;
 use App\Models\Formacao;
 use App\Models\Formando;
 use App\Models\Subsidio;
-use App\Models\User;
+use App\Models\EstadoCivil;
+use App\Models\Habilitacoes;
+use Illuminate\Http\Request;
+use App\Models\TipoDocumento;
+use Illuminate\Support\Facades\Hash;
+use App\Models\NrTrabalhadores_Opcao;
+use Illuminate\Support\Facades\Storage;
 
 class FormController extends Controller
 {
@@ -113,22 +115,19 @@ class FormController extends Controller
         $formando = new Formando($formando_validation);
         $formando->save();
         if($empresa['nifEmpresa']){
-            $empresaExistente = Empresa::where('nifEmpresa',$empresa['nifEmpresa'])->firstOr(function(){
-                $formando->empresa()-save(new Empresa($empresa));
+            $empresaExistente = Empresa::where('nifEmpresa',$empresa['nifEmpresa'])->firstOr(function($formando,$empresa){
+                $formando->empresa()->save(new Empresa($empresa));
+                return null;
             });
-            $formando->empresa()-save(
-                Empresa::where('nifEmpresa',$empresa['nifEmpresa'])->firstOr( function()
-                    {
-                        return new Empresa($empresa);
-                    }
-                )
-            );
+            if($empresaExistente){
+                $formando->empresa()->save($empresaExistente);
+            }
         }
 
         if($validateUser['password']){
             $user = User::create([
                 'name' => $formando->nome,
-                'email' => $validateUser->email,
+                'email' => $formando->email,
                 'password' => Hash::make($validateUser['password']),
                 'profile_type' => 'Formando',
                 'profile_id' => $formando->id, 
@@ -139,6 +138,6 @@ class FormController extends Controller
 
         
 
-        return dd($formando);
+        return view('form.sucesso', ['nomeFromacao'=> $idFormacao]);
     }
 }
