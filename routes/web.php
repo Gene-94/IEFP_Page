@@ -27,6 +27,10 @@ Route::get('/formando', function () {
     return view('dashboard.formando');
 });
 
+Route::get('/admin', function () {
+    return view('dashboard.adminDashboard');
+});
+
 
 /*
 Route::get('/dashboard', function(){
